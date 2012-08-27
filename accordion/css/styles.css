@@ -1,0 +1,16 @@
+/* START ACCORDION */
+div.accordion-wrap{position:relative}
+dl.accordion{width:100%; font-family:Arial,sans-serif}
+dl.accordion dt{cursor:pointer;  color:#232520; font-size:14px; }
+dl.accordion dt a{text-decoration:none; color:#232520; background:url(../img/plus-minus.gif) left 17px no-repeat; padding:15px 0px 4px 20px; display: block;}
+dl.accordion dd{padding:0px 0px 10px 40px; color:#737267; font-size:12px; line-height:1em}
+h3{font-family:Times; font-size:14px; color:393a35; border-bottom:1px dotted #9c9c9a; padding-bottom:8px; margin-top:35px; text-transform:uppercase; letter-spacing:0.1em}
+dl.accordion dt.active a{background:url(../img/plus-minus.gif) left -122px no-repeat}
+
+div.expand-collapse-wrap{position:absolute; right:0; top:0px; color:#846422}
+
+a.expand-link, a.collapse-link{color:#846422; font-family:Arial,sans-serif; font-size:11px; cursor:pointer; text-decoration:none;}
+span.expand-link:hover, span.collapse-link:hover{ text-decoration:underline}
+span.expand-link{padding-right:3px}
+span.collapse-link{padding-left:3px}
+/* END ACCORDION */

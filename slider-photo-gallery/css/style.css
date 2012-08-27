@@ -1,0 +1,109 @@
+
+*{padding:0; margin:0; font:12px/1.5 Arial,Helvetica,sans-serif}/* reset - remove for production */
+
+div#wrapper, div.wrap{ width: 972px; margin: 0 auto;}
+
+div#footerContent{}
+
+div#footerContentWrap{ background-color: #f3f3f3;  padding:30px 0 35px 0;}
+
+h2 {font-family: "Times New Roman"; color:#846422; font-size: 22px; letter-spacing: 0.05em; padding-bottom: 20px;}
+
+/*
+    ColorBox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999}
+#cboxOverlay{position:fixed; width:100%; height:100%}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left}
+#cboxContent{position:relative}
+#cboxLoadedContent{overflow:auto}
+#cboxTitle{margin:0}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:612px; height:100%; z-index:9999}
+#cboxLoadingOverlay{opacity:.8; -moz-opacity:.8; filter:alpha(opacity=8)}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; border-right:1px solid #262626}
+.cboxIframe{width:100%; height:100%; display:block; border:0}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of ColorBox.  They are
+    ordered &tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:#000}
+#colorbox{background:#54534a}
+    #cboxContent{}
+        .cboxIframe{background:#fff}
+        #cboxError{padding:50px; border:1px solid #ccc}
+        #cboxLoadedContent{overflow:hidden}
+        #cboxTitle{position:absolute; top:43px; clear:both; left:612px; width:244px; padding:0px 20px}
+        #cboxTitle h5{font:22px/1.2 "Times New Roman",Times,serif; text-transform:uppercase; color:#fff}
+        #cboxDescrt{color:#fff; font-family:Arial; font-size:12px; padding-top:18px; text-transform:capitalize; line-height:1.5em}
+        #cboxCurrent{position:absolute; top:-20px; right:0px; color:#ccc}
+        #cboxSlideshow{position:absolute; top:-20px; right:90px; color:#fff}
+        #cboxPrevious a{position:absolute; top:50%; left:-37px; margin-top:-17px; background:url(http://qap.internal.ihg.com/content/dam/etc/media_library/branded/ic/cn/icons/sprite/explore_sprite.png) no-repeat -0px -835px; width:36px; height:36px; text-indent:-9999px}
+        #cboxPrevious a:hover{background-position:0 -799px}
+        #cboxNext a{display:block; position:absolute; top:50%; right:-37px; margin-top:-17px; background:url(http://qap.internal.ihg.com/content/dam/etc/media_library/branded/ic/cn/icons/sprite/explore_sprite.png) no-repeat -34px -835px; width:36px; height:36px; text-indent:-9999px}
+        #cboxNext a:hover{background-position:-34px -799px}
+        #cboxLoadingOverlay{background:#000}
+        #cboxLoadingGraphic{background:url(../imgs/loading.gif) no-repeat center center}
+ /*#cboxClose{position:absolute; top:-34px; right:-2px; display:block; background:url(../imgs/controls.png) no-repeat 0 -24px; width:80px; height:24px; text-indent:-9999px}
+        #cboxClose:hover{background-position:0 0}
+*/
+#cboxCurrent{display:none !important}
+
+#gallery-thumbs-wrapper{position:relative}
+
+/* reset */
+#gallery-thumbs-wrapper ul,#gallery-thumbs-wrapper ul li, #gallery-thumbs-wrapper a, #gallery-thumbs-wrapper span{list-style:none; padding:0; margin:0;}
+
+/* full page slider gallery */
+#gallery-thumbs-wrapper.full-page-slider{width:972px; overflow:hidden}
+#gallery-thumbs-wrapper.full-page-slider ul{float:left; list-style:none}
+#gallery-thumbs-wrapper.full-page-slider li{text-align:center; float:left; display: block;}
+#gallery-thumbs-wrapper.full-page-slider li a{display:block}
+#gallery-thumbs-wrapper.full-page-slider li a img{border:none}
+
+#gallery-thumbs-wrapper .carousel-frame{margin:0 auto}
+
+/* grid gallery with no slider */
+#gallery-thumbs-wrapper.sm-grid{width:474px!important;  position: relative; overflow: hidden;}
+#gallery-thumbs-wrapper.sm-grid ul{ list-style:none; width:474px; height:auto!important; position: relative; display: block;}
+#gallery-thumbs-wrapper.sm-grid li{text-align:center; display:block; float: left; position: relative;}
+#gallery-thumbs-wrapper.sm-grid li a{ border:none;}
+#gallery-thumbs-wrapper.sm-grid li a img{border:none; 
+    :114px; height:114px; display: block; }
+
+#gallery-thumbs-wrapper.sm-grid, #gallery-thumbs-wrapper.sm-grid ul {width:482px!important; height:auto!important;}
+#gallery-thumbs-wrapper.sm-grid ul li { padding: 0 6px 6px 0;}
+#gallery-thumbs-wrappe .sm-grid ul li:nth-child(4n){ padding: 0 0 6px 0;} /*DISABLED FOR DAY*/
+
+/* carousel next and previous buttons */
+/* hide by default */
+span button.caro-next, span button.caro-prev{display:none; position:absolute; border:none; top:50%; margin-top:-26px; height:52px; width:16px;  text-indent:-9999px; no-repeat; cursor:pointer;}
+
+span button.caro-next{ right:0px; background:url(../imgs/controls.png) right -91px}
+span button.caro-prev{left:0px; background:url(../imgs/controls.png) left -91px}
+span button.deactivate-prev{background-position:left -151px; cursor: default;}
+span button.deactivate-next{background-position:right -151px; cursor: default;}
+span.cbox-cta{display:none; line-height:1em}
+div#cboxCta{margin-top:20px}
+div#cboxCta a{cursor:pointer; text-transform:uppercase; color:#232520; padding:1px 10px; background:#F5F5F5; -webkit-border-radius:2px; -moz-border-radius:2px;  border-radius:2px;  font-size:10px;  font-family:Arial;  letter-spacing:.1em;  text-decoration:none}
+
+div#cboxCta a:hover{background:#C6B98E}
+
+/* close btns */
+#cboxClose{position:absolute; top:-42px; right:-2px; display:block; }
+#cboxClose a{ text-decoration:none; background-color:#393A35;  color:#fff; display: block;  cursor:pointer;  float:left; font-weight:normal; font-family:Arial; font-size: 12px;}
+#cboxClose span{ display:block;  float:left;  padding:6px;  text-transform:uppercase; font:0.8em arial; letter-spacing:1px}
+#cboxClose span.closeX{ border-left:1px solid #000;  width:9px}
+#cboxClose a:hover { background-color: #54534A;}
+
+.accessible { position: absolute; left:-9999px;}
+
+div.full-page-lg-thumbs ul{float: left;}
+
+div.full-page-lg-thumbs ul li{display: block; float: left; width:249px; height: 225px}
+div.full-page-lg-thumbs ul li:last-child{width:225px};
+div.full-page-lg-thumbs ul li a {border: none; display: inline-block;}

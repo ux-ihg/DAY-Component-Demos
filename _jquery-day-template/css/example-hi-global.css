@@ -1,0 +1,4960 @@
+/* DO NOT INCLUDE - LOCAL TESTING PURPOSES ONLY
+ * This is Holiday Inn's global.css and should not be used when building in DAY.
+ */
+
+/*
+ * jQuery UI CSS Framework @VERSION
+ *
+ * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Theming/API
+ */
+
+/* Layout helpers
+----------------------------------*/
+.ui-helper-hidden { display: none; }
+.ui-helper-hidden-accessible { position: absolute; left: -99999999px; }
+.ui-helper-reset { margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none; }
+.ui-helper-clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.ui-helper-clearfix { display: inline-block; }
+/* required comment for clearfix to work in Opera \*/
+* html .ui-helper-clearfix { height:1%; }
+.ui-helper-clearfix { display:block; }
+/* end clearfix */
+.ui-helper-zfix { width: 100%; height: 100%; top: 0; left: 0; position: absolute; opacity: 0; filter:Alpha(Opacity=0); }
+
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-disabled { cursor: default !important; }
+
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.ui-icon { display: block; text-indent: -99999px; overflow: hidden; background-repeat: no-repeat; }
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Overlays */
+.ui-widget-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+
+/*
+ * jQuery UI CSS Framework @VERSION
+ *
+ * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Theming/API
+ *
+ * To view and modify this theme, visit http://jqueryui.com/themeroller/?ffDefault=Verdana,Arial,sans-serif&fwDefault=normal&fsDefault=1.1em&cornerRadius=5px&bgColorHeader=43A23B&bgTextureHeader=01_flat.png&bgImgOpacityHeader=100&borderColorHeader=43A23B&fcHeader=fff&iconColorHeader=ffffff&bgColorContent=ffffff&bgTextureContent=01_flat.png&bgImgOpacityContent=100&borderColorContent=43A23B&fcContent=000000&iconColorContent=000000&bgColorDefault=c7d9ff&bgTextureDefault=01_flat.png&bgImgOpacityDefault=100&borderColorDefault=c7d9ff&fcDefault=000000&iconColorDefault=000000&bgColorHover=43A23B&bgTextureHover=01_flat.png&bgImgOpacityHover=100&borderColorHover=43A23B&fcHover=ffffff&iconColorHover=ffffff&bgColorActive=c7d9ff&bgTextureActive=01_flat.png&bgImgOpacityActive=100&borderColorActive=c7d9ff&fcActive=000000&iconColorActive=000000&bgColorHighlight=c7d9ff&bgTextureHighlight=01_flat.png&bgImgOpacityHighlight=100&borderColorHighlight=c7d9ff&fcHighlight=000000&iconColorHighlight=000000&bgColorError=fef1ec&bgTextureError=05_inset_soft.png&bgImgOpacityError=95&borderColorError=cd0a0a&fcError=cd0a0a&iconColorError=cd0a0a&bgColorOverlay=aaaaaa&bgTextureOverlay=01_flat.png&bgImgOpacityOverlay=0&opacityOverlay=45&bgColorShadow=aaaaaa&bgTextureShadow=01_flat.png&bgImgOpacityShadow=0&opacityShadow=35&thicknessShadow=8px&offsetTopShadow=-8px&offsetLeftShadow=-8px&cornerRadiusShadow=8px
+ */
+
+
+/* Component containers
+----------------------------------*/
+.ui-widget { font-family: Verdana,Arial,sans-serif; font-size: 1.1em; }
+.ui-widget .ui-widget { font-size: 1em; }
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: Verdana,Arial,sans-serif; font-size: 1em; }
+.ui-widget-content { border: 1px solid #43a23b; background: #ffffff url(/hotels/images/ui-bg_flat_100_ffffff_40x100.png) 50% 50% repeat-x; color: #000000; }
+.ui-widget-content a { color: #000000; }
+.ui-widget-header { border: 1px solid #43a23b; background: #43a23b url(/hotels/images/ui-bg_flat_100_43a23b_40x100.png) 50% 50% repeat-x; color: #fff; font-weight: bold; }
+.ui-widget-header a { color: #fff; }
+/* Custom Styles for Dialog */
+.ui-dialog {float: left;}
+.ui-dialog .ui-widget-content {border: none;}
+
+/* Interaction states
+----------------------------------*/
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { border: 1px solid #9ed1ff; background: #9ed1ff url(/hotels/images/ui-bg_flat_100_c7d9ff_40x100.png) 50% 50% repeat-x; font-weight: normal; color: #000000; }
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { color: #000000; text-decoration: none; }
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { border: 1px solid #43a23b; background: #43a23b url(/hotels/images/ui-bg_flat_100_43a23b_40x100.png) 50% 50% repeat-x; font-weight: normal; color: #ffffff; }
+.ui-state-hover a, .ui-state-hover a:hover { color: #ffffff; text-decoration: none; }
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { border: 1px solid #9ed1ff; background: #9ed1ff url(/hotels/images/ui-bg_flat_100_c7d9ff_40x100.png) 50% 50% repeat-x; font-weight: normal; color: #000000; }
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { color: #000000; text-decoration: none; }
+.ui-widget :active { outline: none; }
+.ui-state-default-pastdate, .ui-widget-content .ui-state-default-pastdate, .ui-widget-header .ui-state-default-pastdate { border: 1px solid #9ed1ff; background: #9ed1ff url(/hotels/images/ui-bg_flat_100_e7e7e7_40x100.png) 50% 50% repeat-x; font-weight: normal; color: #000000; }
+.ui-state-default-pastdate a, .ui-state-default-pastdate a:link, .ui-state-default-pastdate a:visited { color: #000000; text-decoration: none; }
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight  {border: 1px solid #9ed1ff; background: #9ed1ff url(/hotels/images/ui-bg_flat_100_c7d9ff_40x100.png) 50% 50% repeat-x; color: #000000; }
+.ui-state-highlight a, .ui-widget-content .ui-state-highlight a,.ui-widget-header .ui-state-highlight a { color: #000000; }
+.ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {border: 1px solid #cd0a0a; background: #fef1ec url(/hotels/images/ui-bg_inset-soft_95_fef1ec_1x100.png) 50% bottom repeat-x; color: #cd0a0a; }
+.ui-state-error a, .ui-widget-content .ui-state-error a, .ui-widget-header .ui-state-error a { color: #cd0a0a; }
+.ui-state-error-text, .ui-widget-content .ui-state-error-text, .ui-widget-header .ui-state-error-text { color: #cd0a0a; }
+.ui-priority-primary, .ui-widget-content .ui-priority-primary, .ui-widget-header .ui-priority-primary { font-weight: bold; }
+.ui-priority-secondary, .ui-widget-content .ui-priority-secondary,  .ui-widget-header .ui-priority-secondary { opacity: .7; filter:Alpha(Opacity=70); font-weight: normal; }
+.ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled { opacity: .35; filter:Alpha(Opacity=35); background-image: none; }
+
+/* Icons
+----------------------------------*/
+
+/* states and images */
+.ui-icon { width: 16px; height: 16px; background-image: url(/hotels/images/ui-icons_000000_256x240.png); }
+.ui-widget-content .ui-icon {background-image: url(/hotels/images/ui-icons_000000_256x240.png); }
+.ui-widget-header .ui-icon {background-image: url(/hotels/images/ui-icons_ffffff_256x240.png); }
+.ui-state-default .ui-icon { background-image: url(/hotels/images/ui-icons_000000_256x240.png); }
+.ui-state-hover .ui-icon, .ui-state-focus .ui-icon {background-image: url(/hotels/images/ui-icons_ffffff_256x240.png); }
+.ui-state-active .ui-icon {background-image: url(/hotels/images/ui-icons_000000_256x240.png); }
+.ui-state-highlight .ui-icon {background-image: url(/hotels/images/ui-icons_000000_256x240.png); }
+.ui-state-error .ui-icon, .ui-state-error-text .ui-icon {background-image: url(/hotels/images/ui-icons_cd0a0a_256x240.png); }
+
+/* positioning */
+.ui-icon-carat-1-n { background-position: 0 0; }
+.ui-icon-carat-1-ne { background-position: -16px 0; }
+.ui-icon-carat-1-e { background-position: -32px 0; }
+.ui-icon-carat-1-se { background-position: -48px 0; }
+.ui-icon-carat-1-s { background-position: -64px 0; }
+.ui-icon-carat-1-sw { background-position: -80px 0; }
+.ui-icon-carat-1-w { background-position: -96px 0; }
+.ui-icon-carat-1-nw { background-position: -112px 0; }
+.ui-icon-carat-2-n-s { background-position: -128px 0; }
+.ui-icon-carat-2-e-w { background-position: -144px 0; }
+.ui-icon-triangle-1-n { background-position: 0 -16px; }
+.ui-icon-triangle-1-ne { background-position: -16px -16px; }
+.ui-icon-triangle-1-e { background-position: -32px -16px; }
+.ui-icon-triangle-1-se { background-position: -48px -16px; }
+.ui-icon-triangle-1-s { background-position: -64px -16px; }
+.ui-icon-triangle-1-sw { background-position: -80px -16px; }
+.ui-icon-triangle-1-w { background-position: -96px -16px; }
+.ui-icon-triangle-1-nw { background-position: -112px -16px; }
+.ui-icon-triangle-2-n-s { background-position: -128px -16px; }
+.ui-icon-triangle-2-e-w { background-position: -144px -16px; }
+.ui-icon-arrow-1-n { background-position: 0 -32px; }
+.ui-icon-arrow-1-ne { background-position: -16px -32px; }
+.ui-icon-arrow-1-e { background-position: -32px -32px; }
+.ui-icon-arrow-1-se { background-position: -48px -32px; }
+.ui-icon-arrow-1-s { background-position: -64px -32px; }
+.ui-icon-arrow-1-sw { background-position: -80px -32px; }
+.ui-icon-arrow-1-w { background-position: -96px -32px; }
+.ui-icon-arrow-1-nw { background-position: -112px -32px; }
+.ui-icon-arrow-2-n-s { background-position: -128px -32px; }
+.ui-icon-arrow-2-ne-sw { background-position: -144px -32px; }
+.ui-icon-arrow-2-e-w { background-position: -160px -32px; }
+.ui-icon-arrow-2-se-nw { background-position: -176px -32px; }
+.ui-icon-arrowstop-1-n { background-position: -192px -32px; }
+.ui-icon-arrowstop-1-e { background-position: -208px -32px; }
+.ui-icon-arrowstop-1-s { background-position: -224px -32px; }
+.ui-icon-arrowstop-1-w { background-position: -240px -32px; }
+.ui-icon-arrowthick-1-n { background-position: 0 -48px; }
+.ui-icon-arrowthick-1-ne { background-position: -16px -48px; }
+.ui-icon-arrowthick-1-e { background-position: -32px -48px; }
+.ui-icon-arrowthick-1-se { background-position: -48px -48px; }
+.ui-icon-arrowthick-1-s { background-position: -64px -48px; }
+.ui-icon-arrowthick-1-sw { background-position: -80px -48px; }
+.ui-icon-arrowthick-1-w { background-position: -96px -48px; }
+.ui-icon-arrowthick-1-nw { background-position: -112px -48px; }
+.ui-icon-arrowthick-2-n-s { background-position: -128px -48px; }
+.ui-icon-arrowthick-2-ne-sw { background-position: -144px -48px; }
+.ui-icon-arrowthick-2-e-w { background-position: -160px -48px; }
+.ui-icon-arrowthick-2-se-nw { background-position: -176px -48px; }
+.ui-icon-arrowthickstop-1-n { background-position: -192px -48px; }
+.ui-icon-arrowthickstop-1-e { background-position: -208px -48px; }
+.ui-icon-arrowthickstop-1-s { background-position: -224px -48px; }
+.ui-icon-arrowthickstop-1-w { background-position: -240px -48px; }
+.ui-icon-arrowreturnthick-1-w { background-position: 0 -64px; }
+.ui-icon-arrowreturnthick-1-n { background-position: -16px -64px; }
+.ui-icon-arrowreturnthick-1-e { background-position: -32px -64px; }
+.ui-icon-arrowreturnthick-1-s { background-position: -48px -64px; }
+.ui-icon-arrowreturn-1-w { background-position: -64px -64px; }
+.ui-icon-arrowreturn-1-n { background-position: -80px -64px; }
+.ui-icon-arrowreturn-1-e { background-position: -96px -64px; }
+.ui-icon-arrowreturn-1-s { background-position: -112px -64px; }
+.ui-icon-arrowrefresh-1-w { background-position: -128px -64px; }
+.ui-icon-arrowrefresh-1-n { background-position: -144px -64px; }
+.ui-icon-arrowrefresh-1-e { background-position: -160px -64px; }
+.ui-icon-arrowrefresh-1-s { background-position: -176px -64px; }
+.ui-icon-arrow-4 { background-position: 0 -80px; }
+.ui-icon-arrow-4-diag { background-position: -16px -80px; }
+.ui-icon-extlink { background-position: -32px -80px; }
+.ui-icon-newwin { background-position: -48px -80px; }
+.ui-icon-refresh { background-position: -64px -80px; }
+.ui-icon-shuffle { background-position: -80px -80px; }
+.ui-icon-transfer-e-w { background-position: -96px -80px; }
+.ui-icon-transferthick-e-w { background-position: -112px -80px; }
+.ui-icon-folder-collapsed { background-position: 0 -96px; }
+.ui-icon-folder-open { background-position: -16px -96px; }
+.ui-icon-document { background-position: -32px -96px; }
+.ui-icon-document-b { background-position: -48px -96px; }
+.ui-icon-note { background-position: -64px -96px; }
+.ui-icon-mail-closed { background-position: -80px -96px; }
+.ui-icon-mail-open { background-position: -96px -96px; }
+.ui-icon-suitcase { background-position: -112px -96px; }
+.ui-icon-comment { background-position: -128px -96px; }
+.ui-icon-person { background-position: -144px -96px; }
+.ui-icon-print { background-position: -160px -96px; }
+.ui-icon-trash { background-position: -176px -96px; }
+.ui-icon-locked { background-position: -192px -96px; }
+.ui-icon-unlocked { background-position: -208px -96px; }
+.ui-icon-bookmark { background-position: -224px -96px; }
+.ui-icon-tag { background-position: -240px -96px; }
+.ui-icon-home { background-position: 0 -112px; }
+.ui-icon-flag { background-position: -16px -112px; }
+.ui-icon-calendar { background-position: -32px -112px; }
+.ui-icon-cart { background-position: -48px -112px; }
+.ui-icon-pencil { background-position: -64px -112px; }
+.ui-icon-clock { background-position: -80px -112px; }
+.ui-icon-disk { background-position: -96px -112px; }
+.ui-icon-calculator { background-position: -112px -112px; }
+.ui-icon-zoomin { background-position: -128px -112px; }
+.ui-icon-zoomout { background-position: -144px -112px; }
+.ui-icon-search { background-position: -160px -112px; }
+.ui-icon-wrench { background-position: -176px -112px; }
+.ui-icon-gear { background-position: -192px -112px; }
+.ui-icon-heart { background-position: -208px -112px; }
+.ui-icon-star { background-position: -224px -112px; }
+.ui-icon-link { background-position: -240px -112px; }
+.ui-icon-cancel { background-position: 0 -128px; }
+.ui-icon-plus { background-position: -16px -128px; }
+.ui-icon-plusthick { background-position: -32px -128px; }
+.ui-icon-minus { background-position: -48px -128px; }
+.ui-icon-minusthick { background-position: -64px -128px; }
+.ui-icon-close { background-position: -80px -128px; }
+.ui-icon-closethick { background-position: -96px -128px; }
+.ui-icon-key { background-position: -112px -128px; }
+.ui-icon-lightbulb { background-position: -128px -128px; }
+.ui-icon-scissors { background-position: -144px -128px; }
+.ui-icon-clipboard { background-position: -160px -128px; }
+.ui-icon-copy { background-position: -176px -128px; }
+.ui-icon-contact { background-position: -192px -128px; }
+.ui-icon-image { background-position: -208px -128px; }
+.ui-icon-video { background-position: -224px -128px; }
+.ui-icon-script { background-position: -240px -128px; }
+.ui-icon-alert { background-position: 0 -144px; }
+.ui-icon-info { background-position: -16px -144px; }
+.ui-icon-notice { background-position: -32px -144px; }
+.ui-icon-help { background-position: -48px -144px; }
+.ui-icon-check { background-position: -64px -144px; }
+.ui-icon-bullet { background-position: -80px -144px; }
+.ui-icon-radio-off { background-position: -96px -144px; }
+.ui-icon-radio-on { background-position: -112px -144px; }
+.ui-icon-pin-w { background-position: -128px -144px; }
+.ui-icon-pin-s { background-position: -144px -144px; }
+.ui-icon-play { background-position: 0 -160px; }
+.ui-icon-pause { background-position: -16px -160px; }
+.ui-icon-seek-next { background-position: -32px -160px; }
+.ui-icon-seek-prev { background-position: -48px -160px; }
+.ui-icon-seek-end { background-position: -64px -160px; }
+.ui-icon-seek-start { background-position: -80px -160px; }
+/* ui-icon-seek-first is deprecated, use ui-icon-seek-start instead */
+.ui-icon-seek-first { background-position: -80px -160px; }
+.ui-icon-stop { background-position: -96px -160px; }
+.ui-icon-eject { background-position: -112px -160px; }
+.ui-icon-volume-off { background-position: -128px -160px; }
+.ui-icon-volume-on { background-position: -144px -160px; }
+.ui-icon-power { background-position: 0 -176px; }
+.ui-icon-signal-diag { background-position: -16px -176px; }
+.ui-icon-signal { background-position: -32px -176px; }
+.ui-icon-battery-0 { background-position: -48px -176px; }
+.ui-icon-battery-1 { background-position: -64px -176px; }
+.ui-icon-battery-2 { background-position: -80px -176px; }
+.ui-icon-battery-3 { background-position: -96px -176px; }
+.ui-icon-circle-plus { background-position: 0 -192px; }
+.ui-icon-circle-minus { background-position: -16px -192px; }
+.ui-icon-circle-close { background-position: -32px -192px; }
+.ui-icon-circle-triangle-e { background-position: -48px -192px; }
+.ui-icon-circle-triangle-s { background-position: -64px -192px; }
+.ui-icon-circle-triangle-w { background-position: -80px -192px; }
+.ui-icon-circle-triangle-n { background-position: -96px -192px; }
+.ui-icon-circle-arrow-e { background-position: -112px -192px; }
+.ui-icon-circle-arrow-s { background-position: -128px -192px; }
+.ui-icon-circle-arrow-w { background-position: -144px -192px; }
+.ui-icon-circle-arrow-n { background-position: -160px -192px; }
+.ui-icon-circle-zoomin { background-position: -176px -192px; }
+.ui-icon-circle-zoomout { background-position: -192px -192px; }
+.ui-icon-circle-check { background-position: -208px -192px; }
+.ui-icon-circlesmall-plus { background-position: 0 -208px; }
+.ui-icon-circlesmall-minus { background-position: -16px -208px; }
+.ui-icon-circlesmall-close { background-position: -32px -208px; }
+.ui-icon-squaresmall-plus { background-position: -48px -208px; }
+.ui-icon-squaresmall-minus { background-position: -64px -208px; }
+.ui-icon-squaresmall-close { background-position: -80px -208px; }
+.ui-icon-grip-dotted-vertical { background-position: 0 -224px; }
+.ui-icon-grip-dotted-horizontal { background-position: -16px -224px; }
+.ui-icon-grip-solid-vertical { background-position: -32px -224px; }
+.ui-icon-grip-solid-horizontal { background-position: -48px -224px; }
+.ui-icon-gripsmall-diagonal-se { background-position: -64px -224px; }
+.ui-icon-grip-diagonal-se { background-position: -80px -224px; }
+
+
+/* Misc visuals
+----------------------------------*/
+
+/* Corner radius */
+.ui-corner-tl { -moz-border-radius-topleft: 5px; -webkit-border-top-left-radius: 5px; border-top-left-radius: 5px; }
+.ui-corner-tr { -moz-border-radius-topright: 5px; -webkit-border-top-right-radius: 5px; border-top-right-radius: 5px; }
+.ui-corner-bl { -moz-border-radius-bottomleft: 5px; -webkit-border-bottom-left-radius: 5px; border-bottom-left-radius: 5px; }
+.ui-corner-br { -moz-border-radius-bottomright: 5px; -webkit-border-bottom-right-radius: 5px; border-bottom-right-radius: 5px; }
+.ui-corner-top { -moz-border-radius-topleft: 5px; -webkit-border-top-left-radius: 5px; border-top-left-radius: 5px; -moz-border-radius-topright: 5px; -webkit-border-top-right-radius: 5px; border-top-right-radius: 5px; }
+.ui-corner-bottom { -moz-border-radius-bottomleft: 5px; -webkit-border-bottom-left-radius: 5px; border-bottom-left-radius: 5px; -moz-border-radius-bottomright: 5px; -webkit-border-bottom-right-radius: 5px; border-bottom-right-radius: 5px; }
+.ui-corner-right {  -moz-border-radius-topright: 5px; -webkit-border-top-right-radius: 5px; border-top-right-radius: 5px; -moz-border-radius-bottomright: 5px; -webkit-border-bottom-right-radius: 5px; border-bottom-right-radius: 5px; }
+.ui-corner-left { -moz-border-radius-topleft: 5px; -webkit-border-top-left-radius: 5px; border-top-left-radius: 5px; -moz-border-radius-bottomleft: 5px; -webkit-border-bottom-left-radius: 5px; border-bottom-left-radius: 5px; }
+.ui-corner-all { -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+
+/* Overlays */
+.ui-widget-overlay { background: #aaaaaa url(/hotels/images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x; opacity: .45;filter:Alpha(Opacity=45); }
+.ui-widget-shadow { margin: -8px 0 0 -8px; padding: 8px; background: #aaaaaa url(/hotels/images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x; opacity: .35;filter:Alpha(Opacity=35); -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; }
+
+/* jQuery UI Autocomplete 1.8.9
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Autocomplete#theming
+ */
+.ui-autocomplete { position: absolute; cursor: default; }	
+
+/* workarounds */
+* html .ui-autocomplete { width:1px; } /* without this, the menu expands to 100% in IE6 */
+
+/*
+ * jQuery UI Menu 1.8.9
+ *
+ * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Menu#theming
+ */
+.ui-menu {
+	list-style:none;
+	padding: 2px;
+	margin: 0;
+	display:block;
+	float: left;
+}
+.ui-menu .ui-menu {
+	margin-top: -3px;
+}
+.ui-menu .ui-menu-item {
+	margin:0;
+	padding: 0;
+	zoom: 1;
+	float: left;
+	clear: left;
+	width: 100%;
+}
+.ui-menu .ui-menu-item a {
+	text-decoration:none;
+	display:block;
+	padding:.2em .4em;
+	line-height:1.5;
+	zoom:1;
+}
+.ui-menu .ui-menu-item a.ui-state-hover,
+.ui-menu .ui-menu-item a.ui-state-active {
+	font-weight: normal;
+	margin: -1px;
+}
+
+/*
+ * jQuery UI Slider 1.8.11
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Slider#theming
+ */
+.ui-slider { position: relative; text-align: left; }
+.ui-slider .ui-slider-handle { position: absolute; z-index: 2; width: 1.2em; height: 1.2em; cursor: default; }
+.ui-slider .ui-slider-range { position: absolute; z-index: 1; font-size: .7em; display: block; border: 0; background-position: 0 0; }
+
+.ui-slider-horizontal { height: .8em; }
+.ui-slider-horizontal .ui-slider-handle { top: -.3em; margin-left: -.6em; }
+.ui-slider-horizontal .ui-slider-range { top: 0; height: 100%; }
+.ui-slider-horizontal .ui-slider-range-min { left: 0; }
+.ui-slider-horizontal .ui-slider-range-max { right: 0; }
+
+.ui-slider-vertical { width: .8em; height: 100px; }
+.ui-slider-vertical .ui-slider-handle { left: -.3em; margin-left: 0; margin-bottom: -.6em; }
+.ui-slider-vertical .ui-slider-range { left: 0; width: 100%; }
+.ui-slider-vertical .ui-slider-range-min { bottom: 0; }
+.ui-slider-vertical .ui-slider-range-max { top: 0; }
+
+/*
+ * jQuery UI Datepicker @VERSION
+ *
+ * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Datepicker#theming
+ */
+.ui-datepicker { width: 17em; padding: .2em .2em 0; }
+.ui-datepicker .ui-datepicker-header { position:relative; padding:.2em 0; }
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { position:absolute; top: 2px; width: 1.8em; height: 1.8em; }
+.ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-next-hover { top: 1px; }
+.ui-datepicker .ui-datepicker-prev { left:2px; }
+.ui-datepicker .ui-datepicker-next { right:2px; }
+.ui-datepicker .ui-datepicker-prev-hover { left:1px; }
+.ui-datepicker .ui-datepicker-next-hover { right:1px; }
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span { display: block; position: absolute; left: 50%; margin-left: -8px; top: 50%; margin-top: -8px;  }
+.ui-datepicker .ui-datepicker-title { margin: 0 2.3em; line-height: 1.8em; text-align: center; }
+.ui-datepicker .ui-datepicker-title select { font-size:1em; margin:1px 0; }
+.ui-datepicker select.ui-datepicker-month-year {width: 100%;}
+.ui-datepicker select.ui-datepicker-month, 
+.ui-datepicker select.ui-datepicker-year { width: 49%;}
+.ui-datepicker table {width: 100%; font-size: .9em; border-collapse: collapse; margin:0 0 .4em; }
+.ui-datepicker th { padding: .7em .3em; text-align: center; font-weight: bold; border: 0;  }
+.ui-datepicker td { border: 0; padding: 1px; }
+.ui-datepicker td span, .ui-datepicker td a { display: block; padding: .2em; text-align: right; text-decoration: none; }
+.ui-datepicker .ui-datepicker-buttonpane { background-image: none; margin: .7em 0 0 0; padding:0 .2em; border-left: 0; border-right: 0; border-bottom: 0; }
+.ui-datepicker .ui-datepicker-buttonpane button { float: right; margin: .5em .2em .4em; cursor: pointer; padding: .2em .6em .3em .6em; width:auto; overflow:visible; }
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current { float:left; }
+
+/* with multiple calendars */
+.ui-datepicker.ui-datepicker-multi { width:auto; }
+.ui-datepicker-multi .ui-datepicker-group { float:left; }
+.ui-datepicker-multi .ui-datepicker-group table { width:95%; margin:0 auto .4em; }
+.ui-datepicker-multi-2 .ui-datepicker-group { width:50%; }
+.ui-datepicker-multi-3 .ui-datepicker-group { width:33.3%; }
+.ui-datepicker-multi-4 .ui-datepicker-group { width:25%; }
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header { border-left-width:0; }
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header { border-left-width:0; }
+.ui-datepicker-multi .ui-datepicker-buttonpane { clear:left; }
+.ui-datepicker-row-break { clear:both; width:100%; }
+
+/* RTL support */
+.ui-datepicker-rtl { direction: rtl; }
+.ui-datepicker-rtl .ui-datepicker-prev { right: 2px; left: auto; }
+.ui-datepicker-rtl .ui-datepicker-next { left: 2px; right: auto; }
+.ui-datepicker-rtl .ui-datepicker-prev:hover { right: 1px; left: auto; }
+.ui-datepicker-rtl .ui-datepicker-next:hover { left: 1px; right: auto; }
+.ui-datepicker-rtl .ui-datepicker-buttonpane { clear:right; }
+.ui-datepicker-rtl .ui-datepicker-buttonpane button { float: left; }
+.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current { float:right; }
+.ui-datepicker-rtl .ui-datepicker-group { float:right; }
+.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header { border-right-width:0; border-left-width:1px; }
+.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header { border-right-width:0; border-left-width:1px; }
+
+/* IE6 IFRAME FIX (taken from datepicker 1.5.3 */
+.ui-datepicker-cover {
+    display: none; /*sorry for IE5*/
+    display/**/: block; /*sorry for IE5*/
+    position: absolute; /*must have*/
+    z-index: -1; /*must have*/
+    filter: mask(); /*must have*/
+    top: -4px; /*must have*/
+    left: -4px; /*must have*/
+    width: 200px; /*must have*/
+    height: 200px; /*must have*/
+}
+
+/*-------------------------*/
+/* START - CUSTOMIZATIONS */
+/*-------------------------*/
+.ui-widget {font-family: Arial, Helvetica, sans-serif; font-size: 1em;}
+/* Suggestive Text */
+.ui-autocomplete {max-width: 383px; overflow-x: hidden; overflow-y: hidden;}
+.ui-autocomplete.ui-widget-content {border: 1px solid #BCAFA9;}
+.ui-autocomplete.ui-menu {padding: 0;}
+.ui-autocomplete.ui-corner-all,
+.ui-autocomplete .ui-corner-all {-moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;}
+	.ui-autocomplete .ui-menu-item a {background-color: #fff; color: #4784BE; font-size: 1.083em; font-weight: bold;}
+	.ui-autocomplete .ui-menu-item a.ui-state-hover,
+	.ui-autocomplete .ui-menu-item a.ui-state-active {background-image: none; background-color: #4784BE; border-color: #4784BE; color: #fff; font-weight: bold;}
+	.ui-autocomplete .airport a {background: transparent url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/icons/sprite/sprite.gif) no-repeat scroll 99.5% -285px; padding: 0.2em 20px 0.2em 0.4em;}
+	.ui-autocomplete .airport #ui-active-menuitem {background-image: url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/icons/sprite/sprite.gif); background-position: 99.5% -351px;}
+/* Slider */
+.ui-slider-vertical .ui-slider-handle {
+	width: 20px;
+    height: 14px; 
+    background: transparent url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/icons/sprite/sprite.gif) no-repeat scroll 0 -3414px;
+    overflow: hidden; 
+    margin-bottom: -7px;
+    border-style: none;
+    border: none; 
+}
+/* Calendar */
+.ui-datepicker {
+	padding: 1em;
+	width: 18em;
+}
+.ui-datepicker .calCloseBtn {
+	background: transparent url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/icons/sprite/sprite.gif) no-repeat scroll 100% -1064px;
+	cursor: pointer;
+	height: 16px;
+	text-indent: -999em;
+	width: 16px;
+}
+.ui-datepicker-multi .ui-datepicker-group table {
+	border: 1px solid #43a23b;
+	margin: 0 auto .4em;
+	width: 100%;
+}
+.ui-datepicker-multi-2 .ui-datepicker-group {width: 49%;}
+.ui-datepicker-multi-2 .ui-datepicker-group-first {margin-right: 1%;}
+.ui-datepicker-multi-2 .ui-datepicker-group-last {margin-left: 1%;}
+.ui-datepicker .ui-widget-header {background-image: none;}
+.ui-datepicker td span,
+.ui-datepicker td a {text-align: center;}
+.ui-datepicker .custControl {
+	color: #43a23b;
+	cursor: pointer;
+	font-size: 11px;
+	text-decoration: underline;
+}
+.ui-datepicker td.ui-state-disabled span {background-image: none; background-color: #e7e7e7; border-color: #e7e7e7; color: #999; text-decoration: line-through;}
+.ui-datepicker td.ui-state-disabled { opacity: 1; filter:Alpha(Opacity=100); }
+.ui-datepicker .ui-state-default, .ui-datepicker .ui-state-highlight { background-image: none; background-color: #9ed1ff; }
+.ui-datepicker .ui-state-hover, .ui-datepicker .ui-datepicker-range-start, .ui-datepicker .ui-datepicker-range-end { background-image: none; background-color: #77b900; color: #fff; }
+.ui-datepicker td.ui-state-disabled span.ui-datepicker-range-start { background-image: none; background-color: #77b900; color: #fff; text-decoration: none; }
+.ui-datepicker .ui-datepicker-range { background-image: none; background-color: #77b900; color: #fff; }
+.ui-datepicker .legend-selected-date { background-color: #77b900; }
+.ui-datepicker .ui-icon.ui-icon-circle-triangle-w { background: transparent url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/icons/sprite/sprite.gif) no-repeat scroll 5px -817px; } /* Adjusted 5px horizontally, -3px vertically to 'center' icon */
+.ui-datepicker .ui-icon.ui-icon-circle-triangle-e { background: transparent url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/icons/sprite/sprite.gif) no-repeat scroll -17px -745px; } /* Adjusted 5px horizontally, -3px vertically to 'center' icon */
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { cursor: pointer; }
+.ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-next-hover { background-color: transparent; }
+
+/* Overriding from: Component containers */
+.ui-widget-content { background-image: none; }
+
+/* Overriding from: Icons - states and images */
+.ui-icon { background-image: none; }
+.ui-widget-content .ui-icon { background-image: none; }
+.ui-widget-header .ui-icon { background-image: none; }
+.ui-state-default .ui-icon { background-image: none; }
+.ui-state-hover .ui-icon, .ui-state-focus .ui-icon { background-image: none; }
+.ui-state-active .ui-icon { background-image: none; }
+.ui-state-highlight .ui-icon { background-image: none; }
+.ui-state-error .ui-icon, .ui-state-error-text .ui-icon { background-image: none; }
+/*-------------------------*/
+/* END - CUSTOMIZATIONS */
+/*-------------------------*/
+
+
+
+
+
+/*-------------------------*/
+/* Start - Global */
+/*-------------------------*/
+
+#wrapper {
+	padding: 0 10px;
+}
+
+/* brand-specific generic elements */
+/*h2, h3 {color: #43a23b;}*/
+
+a:link {color: #4284bf;}
+a:visited {color: #4284bf;}
+a:hover {color: #4284bf;}
+a:active {color: #4284bf;}
+
+.breadcrumb {color: #000;}
+.breadcrumb a {color: #43a23b;}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"] {border: 2px inset #16a80a;}
+
+#MastheadShell #MastheadContainer .header .logoValign {
+	vertical-align: top; 
+	padding-top:10px;
+}	
+.arch-FocusPanel .langContainerUSen #langBox {
+	position: relative;
+	top: 2px;
+	color: #8E8077;
+	font-size: 11px;
+	font-weight: normal;
+}
+
+table.langHI {
+	font-size:11px; 
+	padding:0px 0 10px 0; 
+	color:#8e8077; 
+	float:right;
+	height:44px;
+	padding:0;
+	margin:0 ;
+}
+table.langHI span.Apple-style-span a {
+	position:relative;
+	top:2px;
+	font-size:11px;
+	text-decoration:none;
+}
+.welcomeHeader {
+	vertical-align:top;
+	padding: 2px 6px 0;
+	font-size:11px;
+	background:#fff url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/backgrounds/0001.gif) no-repeat 100% 7px ;
+}
+.custCare p {
+	padding:4px 0 0;
+	margin:0; 
+	line-height:0.9em;
+}
+.custCare span {color:black;}
+.custCare {
+	padding:0 10px 0 10px; 
+	background:#fff url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/backgrounds/0001.gif) 100% 7px no-repeat; 
+	vertical-align:top;
+}
+.custCare a {
+	text-decoration:none;
+	font-size: 11px;
+}
+.custCare .textPar { margin-top: -1px; }
+*+html .custCare .textPar { margin-top: 0; }
+.custCare a:link {color:#4784be;}  
+.custCare span a,
+.custCare span b {color:#3078bd;}
+#FooterContainer p {color:#8E8077;}
+#FooterContainer a {color:#4784BE; text-decoration:underline;}
+#hdPageBodyWelcome,
+#hdPageBodySummary,
+.custCare .textPar p {margin:0;}
+.signInMenu a:hover,
+.custCare a:hover,
+#FooterContainer a:hover {color: #43a23b;}
+.signInMenu a:visited, 
+.custCare a:visited, 
+#FooterContainer a:visited {color: #337228 !important;}
+.signInMenu a:active, 
+.custCare a:active, 
+#FooterContainer a:active {color: #ffcd00 !important;}
+#idPCRSigninImplicit {
+	cursor:pointer;
+	color:#3078BD;
+}
+
+.welcomeHeader a {
+	color:#3078BD;
+}
+
+/* firefox 3.6.12 completely ignores the <header> tag */
+#printable header{	
+	margin: 0px auto;
+	width: 850px;
+	height: 75px;	
+}
+#printable #header{
+	width: 850px;
+	margin: 0px auto;
+}
+#printable #header .column,
+#printable #content_container .column{
+	float: left;
+	width: 425px;
+}
+#printable #header .column{
+	margin-top: 5px;
+}
+#printable #header div.phone{
+	text-align: right;
+	color: green;
+	font-size: 18px;
+}
+#printable #wrapper{
+	width: 850px;
+	margin: 0px auto;
+}
+#printable #wrapper #hdHead .breadcrumbs{
+	text-align: left;
+}
+#printable #content_container{
+	margin: 0px auto;
+	width: 850px;
+}
+#printable #content_container h2{
+	font-weight: normal;
+}
+#printable #content_container h3{
+	font-size: 12px;	
+}
+#printable #content_container h4{
+	font-size: 12px;
+	font-style: italic;
+	padding: 0px 0px 0px 20px;
+	margin: 0px 0px 0px 0px;
+}
+#printable #content_container div.column ul{
+	list-style-type: circle;
+}
+#printable #content_container p{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+#resMod .resLinks li a:hover,
+a.compareBack:hover,
+a#viewHotelsOnMap:hover {color:#43a23b;}
+.akamaiHelp {
+  position:absolute; 
+  right:30px; 
+  top:50px;  
+  z-index:5501;
+}
+.akamaiPopup {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border: 1px solid #CCCCCC;
+	float: left;
+	padding: 5px;
+}
+.akamaiInfo {
+	display: inline;
+	float: right;
+	margin: 0;
+	padding: 0;
+}
+.akamaiInfo .akamaiText {display: none;}
+/*-------------------------*/
+/* End - Global */
+/*-------------------------*/
+
+/* Message: Error/Warning/Information */
+.msgContainer {
+    background-color: #fff;
+    border: 1px solid;
+    font-size: 0.917em;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+.msgContainer.error {
+	background-color: #fff9e0;
+	border-color: #ca0000;
+}
+.msgContainer.warn {
+	background-color: #fff;
+	border-color: #e7ded8;
+}
+.msgContainer.info {}
+.message {
+	background-attachment: scroll;
+	background-color: transparent;
+	background-position: 0 3px;
+	background-repeat: no-repeat;
+	padding: 0 0 0 16px;
+}
+.msgHeader {
+	display: block;
+	font-weight: bold;
+}
+.error .message {background-image: url(../images/icon_error.gif);}
+.warn .message {background-image: url(../images/icon_warn.gif);}
+.info .message {}
+
+.msgConfirmChanges {
+	background: #fff9df url() scroll no-repeat 0% 0%;
+	border: 1px solid #fcec9c;
+	clear: both;
+	padding: 10px 10px 10px 30px;
+	margin-bottom: 2em;
+}
+/* End Message: Error/Warning/Information */
+
+/* Start - Content Landing Pages */
+.heroContainer {margin: 1em 0;}
+.heroContainer .image {float: none;}
+.dealContainer {
+	margin: 1em 0 2em 0;
+	overflow: hidden;
+}
+.dealContainer .thumbnail {
+	float: left;
+	margin: 0.5em 2.5em 0 0;
+	width: 107px;
+}
+.dealContainer .pointBreaks {
+	float: left;
+	margin: 0 1em 0 0;
+	width: 100px;
+}		
+.dealContainer .copy {
+	float: left;
+	width: 835px;
+}
+.dealContainer .copy.pb {width: 442px;}
+.rewardIndex {z-index:2000 !important;}
+.dialogPad {padding:10px;}
+.dialogreward {height: 500px; overflow: auto;}
+
+.dealContainer .copy h2 {
+	font-size: 1em;
+	font-weight: bold;
+}
+a.terms {font-size: 0.917em;}
+.pointsRequiredContainer {margin: 1em 0;}
+.pointsRequired {
+	border-collapse: collapse;
+	border-spacing: 0;
+	cursor:pointer;
+	text-align: center;
+	width: 100%;
+	border-color:#ccc;
+}
+.pointsRequired caption,
+.pointsRequired .rowHead {
+	display: none;
+	/*position: absolute;
+	left: -999em;*/
+}
+.pointsRequired col {border-left: 1px solid #ccc;}
+.pointsRequired col.first {border-left: 0 none;}
+.pointsRequired ul {
+	list-style-type: none;
+	margin: 1em 0;
+	padding: 0;
+}
+.rewardNightsResModWrapper {
+	margin: 1em 0 0 0;
+	overflow: hidden;
+}
+.rewardNightsOfferContainer {
+	float: left;
+	margin: 0 1em 0 0;
+	width: 575px;
+}
+.resModContainer {
+	float: left;
+	width: 385px;
+}
+.rewardNightsText {
+    background-color: #DCECF7;
+	padding: 10px;
+}
+#rewardNights #resMod .advanceSearchParent{
+    padding: 5px;
+    position: relative;
+    right: 5px;
+}
+#rewardNgts {overflow-x: hidden;}
+#rewardNgts h1, #rewardNgts h2 {
+	font-size: 18px !important;
+}
+#rewardNgts .image {float:none;}
+
+#mainDivText .closeControl {
+	background: transparent url(/hotels/images/sprites.gif) scroll no-repeat 0 -79px;
+	display: block;
+	height: 15px;
+	float: right;
+	margin: -5px -5px 0 0;
+	padding: 0;
+	outline: 0 none;
+	text-indent: -999em;
+	width: 15px;
+	cursor:pointer;
+}
+/* End - Content Landing Pages */
+
+/*imported from hd_style begins*/
+/* Start - HD Header */
+#chat {
+	float: right;
+	margin: 0 auto;
+}
+.chatOpenImage {
+	height: 0;
+	position: absolute;
+	visibility: hidden;
+	width: 0;
+}
+.breadcrumbs {}
+.breadcrumbs a:link,
+.breadcrumbs a:visited {
+	color: #4284bf;
+	text-decoration: underline;
+}
+#hotelname {
+	font-size: 2em;
+	font-weight: normal;
+	line-height: 1em;
+	margin: 0.25em 0 0.1em 0;
+	width: 29.5em;
+}
+.hotelParentInfo {display:inline;}
+
+.hoteladdress .street,
+.hoteladdress .cityStateZip,
+.hoteladdress .country {padding: 0;}
+.hoteladdress a:link,
+.hoteladdress a:visited,
+.hoteladdress a:hover,
+.hoteladdress a:active {color: #000;}
+.hoteladdress .hotelAddressHyphen {
+	position:relative;
+	top:-4px;
+}
+
+.hotelphonefax {
+	font-size: 11px;
+	/*width: 60em;*/
+}	
+.hotelphonefax .phone {
+	border-right: 1px solid #ccc;
+	padding: 0 1em 0 0;
+	cursor:default;
+}
+.hotelphonefax .fax {padding: 0 0 0 1em; cursor:default;}
+.hoteltoolbar a:link,
+.hoteltoolbar a:visited,
+.hoteltoolbar label.favorites,
+.factsheetJsOff {
+	color: #4284bf;
+	margin-right: 5px;
+	padding-left: 19px;
+}
+.factsheetJsOff {cursor:pointer;}
+.hoteltoolbar .hotelEmail {background: transparent url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/cn/icons/func/0005.gif) no-repeat;}
+.hoteltoolbar .directions {background: transparent url(/hotels/images/sprite_hdtoolbar.gif) no-repeat scroll 0 -284px;}
+.hoteltoolbar .favorites {background: transparent url(/hotels/images/sprite_hdtoolbar.gif) no-repeat scroll 0 -330px;}
+.hoteltoolbar .factsheet {background: transparent url(/hotels/images/sprite_hdtoolbar.gif) no-repeat scroll 0 -422px;}	
+.book-online,
+.hdResDirectNo {color:#000; font-size:12px;}
+.hdResDirectOffer {
+	display:inline; 
+	font-size:11px; 
+	color:#4784be;
+}
+.arch-FocusPanel .langContainerUSen #langBox {
+	position:relative;
+	top:2px;
+	color:#8E8077;
+	font-size:11px;
+	font-weight:normal;
+}
+.langSwitchCollapsed,
+.langSwitchExpanded {
+	background: transparent url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/icons/sprite/sprite.gif) no-repeat scroll 100% -1957px;
+	border-color: #fff;
+	border-style: solid;
+	border-width: 1px 1px 0 1px;
+	color: #8E8077;
+	cursor: pointer;
+	display: block;
+	font-size: 11px;
+	font-weight: normal;
+	height: 16px;
+	padding: 0px 15px 3px 5px;
+	text-align: left;
+	position:relative;
+}
+.langSwitchExpanded {
+	background: transparent url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/icons/sprite/sprite.gif) no-repeat scroll 100% -2017px;
+	border-color: #e7ded8;
+}
+.langSwitch span.langBoxTitle, 
+.langSwitchOff span.langBoxTitle {
+	color:#8E8077;
+	font-weight:normal;
+}
+.langSwitch span {
+	font-weight:bold; 
+	color:#4784be;
+}
+.langSwitchDisabled {
+	display:block;  
+	height:16px; 
+	color:#4784BE;
+	padding-right:11px;
+}
+.langSwitch {position:relative;}
+#langMain {z-index:5001;}
+.langBxShow {
+	position:absolute;
+	right:0; 
+	display:block; 
+	background:#fff; 
+	border-width:1px 1px 1px 1px;
+	border-style:solid; 
+	border-color:#e7ded8; 
+	padding:0px; 
+	z-index:5000;
+}
+#langBxUSen {
+	font-size:11px;
+	list-style-type:none; 
+	padding:0;
+}
+#langBxUSen ul {
+	list-style-type:none; 
+	padding:0; 
+	margin:0;
+}
+#langBoxDropdown #langBxUSen ul a {
+	padding:3px 6px;
+	display:block;
+	width:113px; 
+	color:#4784be;
+	text-decoration:none;
+	text-align:left;
+}
+#langBoxDropdown #langBxUSen ul a:hover {
+	background-color: #4784be; 
+	color:#fff;
+}
+
+/* begin updated header css */
+#header_container {color: #fff;}
+#header_container p.logo{
+	padding: 10px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	height: 30px;
+	overflow: visible;
+	width: 240px;
+	float: left;
+}
+#header_container ul.sub{
+	float: right;
+	margin: 5px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-size: 11px;
+	list-style-type: none;
+	color: #000000;
+}
+#header_container ul.sub li{
+	float: right;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 3px 0px 3px;
+}
+
+#header_container ul.sub li.headersubPipe{color: #8E8077;}
+
+#header_container ul.sub li a{text-decoration:none;}
+#header_container ul.bookOnline #helpIcon{display:inline;}
+#header_container ul.bookOnline{
+	float: right;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-size: 11px;
+	list-style-type: none;
+	color: #8E8077;
+}
+#header_container ul.bookOnline li{
+	float: right;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 3px 0px 3px;
+}
+#header_container ul.sub li p{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	color: #8E8077;
+}
+#header_container .hdResDirectNo {}
+#header_container div.signIn{
+	width: 366px;
+	height: 90px;
+	background-color: #C4EEFC;
+	color: #00338e;
+	float: right;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	vertical-align: bottom;
+}
+
+#header_container .custCare {
+	background: none; 
+}
+#header_container .langSwitchCollapsed, .langSwitchExpanded {
+	border-color: none;
+	border-style:solid;
+	border-width:0px 0px 0px 0px;
+	height: auto;
+	padding:0px 15px 3px 5px;
+}
+#header_container div.signIn p{
+	font-size: 11px;
+	float: left;
+	padding: 10px 0px 0px 10px;
+	margin: 0px 0px 0px 0px;
+}
+
+#header_container .signIn p label{
+	display: inline-block;
+	vertical-align:top;
+}
+#header_container .signIn p input.pin{
+	width: 42px;
+}
+#header_container .signIn p.actionButton{
+	vertical-align: bottom;
+	padding: 27px 10px 0px 0px;
+	float: right;
+}
+/* end updated header css */
+
+/* start - brand logo row */
+#footerImageRowWrapper {clear: both;}
+#footerImageRow {text-align: center;}
+#footerLogos {
+	list-style: none;
+	height: 48px;
+	padding:30px 0px 0px 0px;
+	margin: 1em auto;
+	width: 924px;
+	text-align: left;
+}
+#footerLogos li {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+#footerLogos li a {
+	display: block;
+	text-decoration: none;
+	background-image: url(http://prodcache.internal.ihg.com/content/dam/brand/pc/HeaderAndFooter/images/footerlogosSprite_all.gif);
+}
+#ihgFooterLogo {
+	width:	77px;
+	height: 48px;
+	background-position: 0 bottom;
+}
+#ihgFooterLogo:hover {background-position: 0 top;}
+#intercontinentalFooterLogo {
+	width:	107px;
+	height: 48px;
+	background-position: -77px bottom;
+}
+#intercontinentalFooterLogo:hover {background-position: -77px top;}
+#crownePlazaFooterLogo {
+	width:	90px;
+	height: 48px;
+	background-position: -186px bottom;
+}
+#crownePlazaFooterLogo:hover {background-position: -186px top;}
+#hotelIndigoFooterLogo {
+	width:	83px;
+	height: 48px;
+	background-position: -276px bottom;
+}
+#hotelIndigoFooterLogo:hover {background-position: -276px top;}
+#holidayInnFooterLogo {
+	width:	79px;
+	height: 48px;
+	background-position: -360px bottom;
+}
+#holidayInnFooterLogo:hover {background-position: -360px top;}
+#holidayInnExpressFooterLogo {
+	width:	75px;
+	height: 48px;
+	background-position: -440px bottom;
+}
+#holidayInnExpressFooterLogo:hover {background-position: -440px top;}
+#staybridgeSuitesFooterLogo {
+	width:	73px;
+	height: 48px;
+	background-position: -516px bottom;
+}
+#staybridgeSuitesFooterLogo:hover {background-position: -516px top;}
+#candlewoodSuitesFooterLogo {
+	width:	81px;
+	height: 48px;
+	background-position: -590px bottom;
+}
+#candlewoodSuitesFooterLogo:hover {background-position: -590px top;}
+#pcrFooterLogo {
+	width:	171px;
+	height: 48px;
+	background-position: -672px bottom;
+}
+#pcrFooterLogo:hover {background-position: -672px top;}
+/* end - brand logo row */
+
+/*Nav Bar*/
+.topNaviHI {
+	margin: 10px 0 0 0;
+	position: relative; 
+	float: right;
+	*z-index: 3;
+}
+ul.topNavigationUSen {
+	padding:0; 
+	margin:0; 
+	margin-bottom:-2px;
+	list-style:none; 
+	height:28px; 
+	position:relative; 
+	z-index:auto; 
+	font-family:arial, verdana, sans-serif;
+	font-size:11px; 
+	text-align:left;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-khtml-border-radius: 20px;
+	border-radius: 20px;
+	float:right;
+}
+ul.topNavigationUSen li.top {
+	display:block; 
+	float:left;
+	font-weight:bold;
+}
+
+ul.topNavigationUSen li.top:hover {
+	position:relative;
+	z-index:200;
+}
+ul.topNavigationUSen li.top a#tab1,
+ul.topNavigationUSen li.top a#tab2,
+ul.topNavigationUSen li.top a#tab3,
+ul.topNavigationUSen li.top a#tab4,
+ul.topNavigationUSen li.top a#tab5{
+	border-color: #fff;
+	border-style: solid;
+	border-width: 1px 1px 0px 1px;
+	display:block;
+	-moz-border-radius: 5px 5px 0px 0px;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	-khtml-border-radius: 5px 5px 0px 0px;
+	border-radius: 5px 5px 0px 0px;
+	cursor: pointer;
+	font-size:12px;
+	padding:10px 15px 0 15px;
+	text-decoration:none;
+	height:24px;	
+	width:auto;	
+	background:#fff;
+}
+
+ul.topNavigationUSen li.top:hover a#tab1,
+ul.topNavigationUSen li.top:hover a#tab2,
+ul.topNavigationUSen li.top:hover a#tab3,
+ul.topNavigationUSen li.top:hover a#tab4,
+ul.topNavigationUSen li.top:hover a#tab5{
+	border-color: #ccc;
+	border-style: solid;
+	border-width: 1px 1px 0px 1px;
+	background:#fff\9;
+}
+ul.topNavigationUSen img.navItemImage {border: none;}
+ul.topNavigationUSen li.top ul.subNav {
+	position:absolute; 
+	left:-9999px; 
+	top:-9999px; 
+	width:0; 
+	height:0; 
+	margin:0; 
+	padding:0; 
+	list-style-type:none;  
+	border-width: 0px 1px 1px 1px; 
+	border-style: solid; 
+	border-color: #d5d0cc;
+	background:url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/backgrounds/0004.gif) repeat-x 0 100%; 
+}
+ul.topNavigationUSen li.top:hover ul.subNav {
+	left:0; 
+	top:35px; 
+	height:auto; 
+	width:auto; 
+	z-index:300;
+	color:#43A23B;
+	font-weight:normal;
+	line-height:16px;
+
+}
+ul.topNavigationUSen li.tab4PCRSignin:hover ul.subNav {
+	right:0; 
+	top:35px; 
+}
+ul.topNavigationUSen li.top:hover ul.subNav li.nav_container {	
+	width:230px;
+	float: none;
+	color: #43A23B;
+	font-weight: normal;
+	border-width: 1px 0px 0px 0px; 
+	border-style: solid; 
+	border-color: #d5d0cc;
+}
+
+/*************
+a tag!
+*************/
+ul.topNavigationUSen li.top:hover ul.subNav li.nav_container:hover,
+ul.topNavigationUSen li.top:hover ul.subNav li.nav_container:hover a.navItem{
+	background:#43a23b; 
+	color:#ffffff;
+}
+/*************
+a tag!
+*************/
+ul.topNavigationUSen li.top ul.subNav li.nav_container a.navItem {
+	border-width: 0px 0px 0px 0px !important;
+}
+ul.topNavigationUSen li.top:hover ul.subNav li.nav_container a.navItem {
+	display:block; 
+	/*height:20px; */
+	padding:7px 10px 5px 10px; 
+	margin:0; 
+	color:#43a23b;  
+	text-decoration:none;
+	font-weight: bold;
+}
+
+
+
+
+
+ul.topNavigationUSen li.top:hover ul.subNav span.memberLoginPCR, 
+ul.topNavigationUSen li.top:hover ul.subNav span.pointsBalancePC { 
+	margin-left: 10px; 
+	font-size: 11px; 
+	background: none;
+}
+
+
+
+
+ul.topNavigationUSen li.top ul.subNav li.nav_container .signInMenu{
+	display:block; 
+	height:174px; 
+	padding: 0 10px 0 10px; 
+	margin:0; 
+	text-decoration:none; 
+	background:url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/backgrounds/0004.gif) repeat-x 0 100%; 
+	color:#43a23b;
+}
+ul.topNavigationUSen li.top:hover ul.subNav li.nav_container .signInMenu a {
+	display:inline;
+	margin-top: 4px;
+}
+.lastNavItem {
+	/*border-bottom:1px solid #d5d0cc;*/
+}
+ul.topNavigationUSen #tab4PCRSignin .navItem {border-bottom:none;}
+
+
+.signInMenu a {
+	font-size:11px; 
+	font-weight:normal; 
+	line-height:12px;
+	color: #4784BE;
+	margin-top: 4px; 
+}
+.signInMenu span {
+	color:black; 
+	font-size:11px; 
+	font-weight:normal; 
+	line-height:12px; 
+}
+.signInMenu form {
+	padding:1px 0 0 10px; 
+	margin:0;
+}
+.signInMenu input[type=checkbox] {
+	vertical-align:middle;
+}
+.signInMenu input[type=text] {
+	width:120px; 
+	border:2px inset #46aa42; 
+	margin-bottom:5px;
+}
+.signInMenu input.piNum {
+	width:70px;
+}
+.signInMenu input[type=image] {
+	padding:4px 0 0 0;
+}
+* html .signInMenu .signInBtn {
+	padding:8px 0 0 0;
+}
+.signInMenu .divider {
+	background:#fff url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/backgrounds/0001.gif) 95% 2px no-repeat; 
+	padding:0 10px 0 0;
+}
+
+.welcomeHeader {
+	vertical-align:top;
+	padding: 2px 6px 0;
+	font-size:11px;
+	background:#fff url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/backgrounds/0001.gif) no-repeat 100% 7px ;
+}
+.welcomeHeader a {color:#3078BD;}
+.navItemImage {margin-left:5px;}
+/* End - HD Header */
+
+/*PCR popup classes begin*/
+
+.successMsg2 {
+	background-color: #D4DFEA;
+	color: #000000;
+	margin-top: 17px;
+	font-size:11px;
+}
+.pcrMsgText1, .pcrMsgText2, .createPinMessage {
+	padding: .9em 0.667em;
+	font-size: 1em;
+}
+#pcrSignInFormContent,
+#pcrForgotPinFormContent,
+#pcrCreatePinFormContent,
+#pcrInfoContent,
+#pcrJoinNowPopup,
+.pointsContent {
+	background-color: #fff;
+	/*border: 1px solid #C5B78C;*/
+	border: 4px solid #D4DFEA;
+	display: none;
+	height: auto;
+	left: 45%;
+	overflow: visible;
+	position: absolute;
+	top: 24px;
+	width: 360px;
+	z-index: 200;
+}
+
+#pcrInfoContent .pcrContent,
+#pcrJoinNowPopup .pcrContent,
+.pointsContent .pcrContent{
+	width:350px;
+	padding:5px !important;
+}
+
+#pcrSignInFormContent .closeBtn, 
+#pcrForgotPinFormContent .closeBtn, 
+#pcrCreatePinFormContent .closeBtn,
+#pcrInfoContent .closeBtn,
+#pcrJoinNowPopup .joinNowcloseBtn,
+.pointsContent .closeBtn {
+	float:right;
+	padding:5px 5px 0 0;
+}
+.pcrContent .errorBox {
+	background:#FFC;
+	font-size:11px;
+	padding:5px;
+}
+.pcrContent .errorBox span {
+	display:block;
+	padding-bottom:3px;
+}
+.pcrReqdDefault,
+input[type="text"].pcrReqdDefault ,
+input[type="password"].pcrReqdDefault {
+	border: 2px inset #0E76D7;
+	line-height: 1.333;
+	font-size: 1em;
+	margin: 0 0.833em 0 0;
+	padding: 0.167em 0 0 0.167em;
+	width:auto;
+}
+.pcrReqdError {
+	border:2px inset #c00 !important;
+}
+.createPinMessage {
+	font-size:11px;
+}
+#pcrSignInFormContent .pcrContent,
+#pcrForgotPinFormContent .pcrContent,
+#pcrCreatePinFormContent .pcrContent,
+#pcrInfoContent .pcrContent,
+#pcrJoinNowPopup .pcrContent,
+.pointsContent .pcrContent {
+	color:#000000;
+	padding:7px 2px 5px 12px;
+	float:left;
+}
+.pcrContent a {
+	color:#3078BD;
+}
+.loginHeader {
+	background: #002859 url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/cn/pcr/login/0001.gif) no-repeat scroll 0 0;
+	float: left;
+	height: 29px;
+	position: relative;
+	width: 360px;
+}
+.createPinTitle, 
+.forgotPinTitle, 
+.signInTitle,  
+.enrollWidget-Heading {
+	font-weight:bold;
+}
+.emailPinButtonWrap, 
+.forgotPinLabelWrap , 
+.createPinLabelWrap , 
+.signInLabelWrap {width:315px;}
+.createPinLabelWrap {margin-bottom:5px;}
+.pcrNumber {width:160px !important;}
+.signInLabelWrap .requiredInformationExplanation {background:none;}
+.requiredInformationExplanation {
+	color:#8E8077;
+	float:right;
+	font-size:11px;
+	padding:0 0 0 15px;
+}
+.module_data{
+	float:left;
+	width:100%;
+}
+.module_data a{
+	text-decoration:underline;
+}
+.signInTitle{
+width:48%;
+text-align:left;
+}
+.data_a,
+#pcrSignInFormContent .data_a,
+#pcrSignInFormContent .data_b {
+	float: left;
+	margin-right: 1em;
+	text-align: left;
+}
+.data_a {
+    width: 110px;
+}
+#pcrSignInFormContent .data_a {
+    width: 160px;
+}
+/*.data_a {width: 15.454em;}  170px / 11px 
+#pcrSignInFormContent .data_a {width: 14.545em;} /* 160px / 11px */
+/*#pcrSignInFormContent .data_b {width: 5em;} /* 55px / 11px */
+#pcrSignInFormContent .rememberMe {
+	width:320px\9; 
+	float:left; 
+	font-size:11px;
+}
+/*.data_a span a {
+	margin-right:5px;
+	position:relative;
+	font-size:11px;
+}*/
+.data_a,
+.data_b,
+#pcrForgotPinFormCollapser,
+#pcrCreatePinFormCollapser {
+	font-size: 0.917em; /* 11px */
+}
+#pcrCreatePinFormCollapser {
+	position:relative;
+	left:5px; 
+}
+.joinNowPanel {
+	background-color: #D4DFEA;
+	float: left;
+	font-size: 0.917em;
+	padding: 1px 0 !important;
+	text-align: center;
+	width: 100% !important;
+}
+#pcrLeftSignInBtn,#pcrSignInFormContent #pcrLeftSignInBtn {
+ 	margin: 0px 0px 0px 0px !important;
+}
+#rewardNightContinueBtn,
+#pcrInfoContent #rewardNightContinueBtn {
+	margin-top:2px; 
+	margin-right:22px; 
+	float:right;
+}
+#pcrSignInFormContent #pcrLeftSignInBtn {float:left;}
+#pcrSignInFormContent .pcrContent .divider {
+	background:#fff url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/backgrounds/0001.gif) 100% 3px no-repeat;
+	padding:0 10px 0 15px;
+}
+#pcrSignInFormContent .pcrContent #pcrForgotPinFormCollapser {
+	padding-left:0;
+	float:left\9;
+}
+.headerBlankSpace {
+	height:40px;
+}
+.rememberCheckbox {
+	position:relative; 
+	top:2px; 
+	margin-left:0;
+	left:-4px\9;
+}
+.pcrWalletSpace {padding-right:30px;}
+.pcrWalletSpacing {padding-right:50px;}
+/*Wallet*/
+a.balanceAnchor {
+	color:#000000;
+	background:url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/cn/pcr/wallet_assets/0007.gif) no-repeat center right;
+	padding-right:10px;
+	text-decoration:none;
+	font-size:11px;
+}
+
+#pcrWalletPopup {
+	position: absolute;
+	right: -154px;
+	top: 0px;
+	z-index:200;
+	background-color:#fff;
+	width:325px;
+	border:1px solid #ccc;
+	border-top:none;
+	display:block;
+	color:#000;
+}
+.hdPCRTreeMainHeader {
+	position:relative;
+	top:0px;
+	font-weight:bold;
+	color:#666;
+	float:left;
+	cursor:pointer;
+}
+table.recentActivity{
+	width: 100%;	
+	border: none;
+}
+.treeParentWrapSelected .hdPCRTreeMainHeader {color:#666;}
+
+* html #pcrWalletPopup {
+	right:18px;
+	top:30px;
+}
+#pcrWalletPopup .shadeBlock {
+	float:left;
+	width:96%;
+	padding:6px;
+	background:#E5EAF0;
+}
+#mainNavigation #pcrWalletPopup table {
+	width:100% !important;
+}
+.upcomingRes table td,
+.recentActivity table td,
+.accountLinks table td {
+	padding:3px 0 0;
+	font-size:11px;
+	white-space:normal;
+}
+.upcomingRes,
+.recentActivity,
+.accountLinks {
+	float:left;
+	width:97%;
+	padding:5px 0 5px 10px;
+	border-bottom:solid 1px #ccc;
+}
+#recentData,
+#upcomingData,
+#accountData {
+	float:left;
+	width:100%;
+}
+.openWallet,
+.closeWallet {
+	background: url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/icons/sprite/sprite.gif) no-repeat scroll 0 -3738px;
+	cursor: pointer;
+	float: left;
+	height: 12px;
+	padding-left: 13px\9;
+	position: relative;
+	right: 5px;
+	top: 3px;
+	width: 12px;
+}
+.closeWallet {background-position: 0 -3676px;}
+#pcrWalletImageFooter {
+	background: #E5E9F2 url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/cn/pcr/wallet_assets/0004.jpg) no-repeat center right;
+	width:325px;
+	height:46px;
+}
+#tab4PCRSignin #hgp-uid-98 {font-weight:normal;}
+/*PCR popup classes end*/
+
+/*Footer classes begin*/
+.pcrInlineLabel,
+.pcrMsgText,
+.lowestRateText {
+  font-size:11px;
+}
+.pcrBlockLabel,
+.resDirectoryNumber,
+.bwcTextLink,
+.lowestRateText {float:left;}
+.resDirectoryNumber {width:50%;}
+.bwcRateParent, 
+.trusteLink,
+.airportCodeHelpIcon {float:right;}
+.trusteLink {width:88px;}
+.bwcRateParent a {color:#43A23B !important; font-weight:bold !important;}
+.bwcTextLink,
+.lowestRateText {width:98%;}
+.BWCFooter {
+	color:#43A23B;
+	font-size:16px;
+	font-weight:bold;
+	text-decoration:none;
+	cursor:pointer;
+}
+.resDirectPhNumber {
+	position:relative; 
+	top:-22px;
+	font-size:20px;
+	color:#43A23B;
+	text-decoration:none;
+}
+.findCodeLink {
+  float:right;
+  color:#4284BF;
+  cursor:pointer;
+}
+.bwcRateParent {
+  width:21%;
+}
+.bwcRateParent p {
+  margin:0;
+  padding:0;
+}
+.footerModuleParent,
+.bottomFooterParent {
+  float:left;
+  width:100%;
+  padding:30px 0 0;
+}
+.bottomFooterParent {padding:40px 0 0;}
+#FooterShell {text-align:left;}
+
+/* Book with Confidence - Start */
+.BWCCloseImage {
+	float:right;
+	margin-right:-5px;
+	margin-top:-5px;
+	cursor: pointer;
+}
+.BWCHeader {
+	color:#000;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 0 0 8px 0;
+	padding:0;
+	text-align: left;
+}
+
+.BWCPanel {
+	border:1px solid #BCAFA9;
+	background: #A6D2A2 url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/backgrounds/0005.gif) no-repeat 0% 100%;
+	text-align: right;	
+	width: 261px;
+}
+.BWCPanel .popupContent {
+	padding:10px 10px 10px;
+	text-align:center;
+}
+.closeicobwc {
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+#boxes .windowbwc {
+  position:absolute;
+  left:0;
+  top:0;
+  width:300px;
+  height:300px;
+  display:none;
+  z-index:9999;
+  padding:20px;
+ }
+
+#boxes #urlbwc {
+  width:253px; 
+  height:339px;
+  padding:10px;
+  background-color:#ffffff;
+}
+
+/* Book with Confidence  - End */
+/*Footer classes end*/
+/*imported from hd_style ends*/
+/*for 9+ rooms popup*/
+#moreThanNineRooms_dialog {padding:4px;}
+#moreThanNineRooms_dialog .closeContainer {
+	position: absolute;
+	padding:0;
+	right: 6px;
+	top: 6px;
+}
+#moreThanNineRooms_dialog .closeButtonContainer {
+	float:left;
+	width:97%;
+	margin-top:7px;
+}
+#moreThanNineRooms_dialog p {
+	width:94%;
+	font-size:12px;
+	font-family:Arial,Helvetica,sans-serif;
+	margin:0;
+	padding:0;
+}
+#moreThanNineRooms_dialog p a {text-decoration:underline;}
+.hgpHideContent,
+.hgpChatModule {display:none;}
+.hdResDirectFooterOffer {
+	color: #4784BE;
+	font-size: 11px;
+	font-weight: normal;
+	padding-left: 52px;
+	position: relative;
+	top: -10px;
+}
+.akamaiHelpFooterIcon {
+	position: relative; 
+	top: -28px;
+	top: -5px\9;
+	display: inline; 
+	margin: 0pt; 
+	padding: 0pt;
+}
+.akamaiHelpFooter {
+	position:absolute;
+	left:265px;
+	margin-top:-27px;
+	*margin-top:0px;
+	z-index:5000;
+}
+/* CSS related to Hotel Deals pages */
+.hotelDealsHeader {
+	font-size:1.5em;
+	padding-top: 10px;
+	padding-bottom: 30px;
+	
+}
+.hotelDealsBreadCrumb a, a.hotelDealsBreadCrumb {
+	text-decoration  : none;
+	color : #43A23B;
+}
+
+.HotelDealsWrapperDiv img
+{
+	padding-right: 30px;
+	padding-bottom: 30px;
+}
+
+.HotelDealsWrapperDiv .text img {
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 5px;
+}
+
+.checkBox-disabled{
+	color:#888888;
+}
+
+/* End of CSS related to Hotel Deals*/
+
+#resMod .calendarControl,
+#datesForm .calendarControl,
+#groupCodeForm .calendarControl {
+	background: #fff url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/icons/sprite/sprite.gif) no-repeat scroll 0 -679px;
+	border: 3px solid #43a23b;
+	border-top-width: 5px;
+	cursor: pointer;
+	display: inline-block;
+	height: 13px;
+	margin-top: 2px;
+	text-indent: -999em;
+	vertical-align: top;
+	width: 21px;
+}
+#datesForm .calendarControl,
+#groupCodeForm .calendarControl {
+	margin-top: 18px;
+	float:left\9;
+}
+#pcrMainForm {z-index:1\9;}
+
+.pcrSignInMainForm{
+	position:absolute;
+	z-index:2000;
+	top:0;
+	left:0;
+}
+
+.bwcRateParent a#bookWithConfidence span{font-weight:bold;}
+#bookWithConfidence span{font-weight:bold;}
+
+.resDirectPhoneNumberSecond{font-size:11px; color:#000000;text-align:center;width:50%;display:block;}
+
+.resProfilePcrId{width:144px;}
+
+/*ul.topNavigationUSen li#tab4PCRSignin ul.priortyclubRewards_Tab{margin-left:-77px;}*/
+
+.bookNow h3.txt_BookNow {
+	padding: 12px 0;
+}
+#reviewForm .calendarControlReviews {
+	background: #fff url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/icons/sprite/sprite.gif) no-repeat scroll 1px -677px;
+	border: 3px solid #43a23b;
+	border-top-width: 5px;
+	display: inline-block;
+	height: 11px;
+	text-indent: -999em;
+	vertical-align: top;
+	width: 18px;
+	cursor: pointer;
+}
+
+/*-------------------------*/
+/* Start - Homepage */
+/*-------------------------*/
+/* Reservation Module */
+.overflowParent {overflow: hidden;}
+* html #resMediaWrapper {width: 100%;}
+
+#resModuleContainer {
+	background-color: white;
+	border: 1px solid #ccc;
+	float: none;
+	margin-top: 37px;
+	margin-left: 0px;
+	padding: 1em;
+	position: absolute;
+	width: 385px;
+	z-index: 12;
+}
+
+#resMediaWrapper {
+	height: 370px;
+	position: relative;
+}
+
+#contentWrapper {padding: 1.833em 0 4.583em;}
+#contentWrapper, #resMediaWrapper {
+	overflow: visible;
+}
+
+#resMediaWrapper.resHomepageNoFlash {
+	background: none;
+/*  background: url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/en/us/backgrounds/home_back/0001.gif) no-repeat scroll 0 0 transparent; */
+}
+
+#resMod {
+	clear: both;
+	margin: 0px 0px 0px 0px;
+}
+#resMod label {
+	cursor: pointer;
+	display: block;
+	font-size: 0.917em;
+	font-weight: bold;
+}
+#resMod .resLinks {
+	font-size: 0.917em;
+	list-style: none;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+}
+#resMod .resLinks li {
+	float: right;
+	margin: 0 1em 0 0;
+	padding: 0;	
+}
+#resMod .resLinks li a {
+	background: #fff url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/icons/sprite/sprite.gif) no-repeat scroll 100% -1321px;
+	padding: 0 17px 1px 0;
+	text-decoration:none;
+}
+#resMod .resLinks .profile,
+#resMod .resLinks .profile span,
+#resMod .resLinks .profile p {float: left;}
+#resMod .resLinks .profile p {
+	width:auto;
+	padding-left:3px;
+}
+#resMod .resLinks .recent {margin: 0;}
+#resMod .row {
+	margin: 0.917em 0 0 0;
+	overflow: hidden;
+}
+#resMod .advanceSearchParent .row {
+	width: 385px;
+	float:left\9;
+}
+
+#resMod .advancedSearchContainerLanding .legal {width:90%;}
+* html #resMod .row {clear: both;}
+#resMod input[type="text"],
+#resMod input[type="password"] {
+	color: #666;
+	font-weight: bold;
+}
+#resMod .closeContainer{
+    float: right;
+    padding: 5px 5px 0 0;
+}
+#resMod .row.dest {margin: 0;}
+#resMod #destination,
+#resMod #routeBegin,
+#resMod #routeEnd {	
+    height: 1.667em;
+	line-height: 1.667em;
+    margin: 0;
+	width: 31.25em;
+}
+#resMod .dest a,
+#destinationLinkFNB,
+#alongARouteLinkFNB,
+#alongARouteLinkSR,
+#destinationLinkSR {text-decoration: underline;}
+#destinationLinkFNB,
+#alongARouteLinkFNB,
+#alongARouteLinkSR,
+#destinationLinkSR {
+	color:#4784BE; 
+	cursor:pointer;
+}
+#resMod .dest a {text-decoration: underline;}
+#resMod .dest .destHelpControl,
+#destinationBoxSR .destHelpControl {
+    background: transparent url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/icons/sprite/sprite.gif) no-repeat scroll 100% -1894px;
+	float: right;
+	height: 16px;
+	left: -5px;
+	position: relative;
+    text-indent: -999em;
+	top: -5px;
+	width: 16px;
+}
+#resMod .dest .alongTheRoute {
+	font-size: 0.833em;
+	vertical-align: top;
+}
+.destinationboxHelpIcon{
+	bottom: 5px; 
+	float: right; 
+	position: relative;
+}
+#destHelp .closeControl,
+#clarifySearch .closeControl,
+.helpLayer .closeControl.layerHead {
+	background: transparent url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/icons/sprite/sprite.gif) no-repeat scroll 100% -1064px;
+	display: block;
+	height: 15px;
+	float: right;
+	margin: -10px -10px 0 0;
+	padding: 0;
+	outline: 0 none;
+	text-indent: -999em;
+	width: 15px;
+}
+#destHelp .closeControl,
+#clarifySearch .closeControl,
+.helpLayer .closeControl.layerHead {margin: -5px -5px 5px 0;}
+* html .helpLayer .closeControl.layerHead {margin: -5px 0 5px 0;}
+.helpLayer .closeControl.layerFoot {
+	background: transparent url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/en/us/hd/buttons/0010.gif) scroll no-repeat 0 0;
+	display: block;
+	height: 18px;
+	margin: 10px auto 5px auto;
+	padding: 0;
+	outline: 0 none;
+	text-indent: -999em;
+	width: 53px;
+}
+* html .helpLayer .layerFoot {float: none;} /* For IE6 */
+#resMod .row.dates {margin: 0.25em 0 0 0;}
+#resMod .checkin,
+#resMod .checkout {
+	float: left;
+	margin: 0;
+}
+#resMod .checkout {float: right;}
+#resMod .checkin label span,
+#resMod .checkout label span {
+	color: #999;
+	font-weight: normal;
+}
+#resMod #checkInDate,
+#resMod #checkOutDate {width: 11.5em;}
+* html #resMod input {
+    background: #fff url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/backgrounds/0008.gif) repeat-x scroll 0 100%;
+    border: 2px inset #16a80a;
+    font-size: 1em;
+    height: 1.667em;
+    line-height: 1.667em;
+    margin: 0;
+    padding: 0.25em;
+}
+* html #resMod #checkInDate,
+* html #resMod #checkOutDate {width: 11.5em;}
+*+html #resMod #checkInDate,
+*+html #resMod #checkOutDate {width: 11.5em;}
+#resMod .adults,
+#resMod .children,
+#resMod .rooms {
+	float: left;
+	width: 10.69em;
+}
+
+
+#resMod .rooms label{
+	display:block\9;
+	width:70px\9;
+	float:left\9;
+}
+
+#resMod .rooms span{
+	width:32px\9;
+	display:block\9;
+	float:left\9;
+}
+
+#resMod .rooms select#roomsCount{
+	width:4.5em\9 !important;
+}
+
+#resMod .children {text-align: center;}
+#resMod .rooms {
+	float: right;
+	text-align: right;
+}
+#resMod .acr label {
+	display: inline;
+	margin: 0 0.5em 0 0;
+	text-align: right;
+	white-space: nowrap;
+}
+#resMod .acr select {
+	padding: 0.273em;
+	width: 4.848em;
+}
+#resMod .rate label{
+	display: inline;
+	float: left;
+	line-height: 2.273em;
+	margin: 0 0.5em 0 0;
+	white-space: nowrap;
+}
+#resMod .rate select{
+	padding: 0.273em;
+	float: right;
+	width: 25.152em;
+}
+#resMod .legal {
+	color: #666;
+	float: left;
+	font-size: 0.75em;
+	line-height: 1.2;
+	margin: 1em 0 0 0;
+}
+#resMod .legal p {
+	margin: 0; 
+	padding:0;
+	font-size: 1.2em;
+}
+#resMod .row.cta {margin: 1.5em 0 0 0;}
+#resMod .advancedSearchOptions {
+	background: transparent url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/icons/sprite/sprite.gif) no-repeat scroll 0 -1576px;
+	color: #4784be;
+	cursor: pointer;
+	display: block;
+	float: left;
+	padding: 0 0 0 20px;
+	width: 15em;
+}
+#resMod .advancedSearchOptions.expanded {background-position: 0 -1189px;}
+
+#resMod .findHotel {
+	float: right;
+	line-height: 0;
+	margin: 0;
+	text-align: right;
+	width: 15em;
+}
+#resMod .advancedSearchContainer {
+	border: 1px solid #ccc;
+	margin: 1em 0 0 0;
+	overflow: auto;
+	padding: 1em;
+}
+#resMod .roomPrefContainer select,
+#resMod .smokingPrefContainer select {
+	padding: 0.273em;
+	width: 100%;
+}
+#resMod .roomPrefContainer select#roomPreference {font-size:11px\9; overflow:visible\9;}
+#resMod .roomPrefContainer,
+#resMod .corpIdContainer,
+#resMod .smokingPrefContainer,
+#resMod .iataContainer {
+	float: left;
+	width: 14em;
+}
+
+#resMod .corpIdContainer label, #resMod .iataContainer label{
+	margin-left:12px\9;
+}
+
+#resMod .corpIdContainer,
+#resMod .iataContainer {margin: 0 0 0 1em;}
+#resMod .corpIdContainer label,
+#resMod .iataContainer label,
+#resMod .help {float: left;}
+#resMod .help {
+    background: transparent url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/icons/sprite/sprite.gif) no-repeat scroll 100% -1894px;
+	display: block;
+	float: left;
+	height: 16px;
+	margin-left: 3px;
+	text-align: left;
+	text-indent: -999em;
+	width: 16px;
+}
+#resMod #rewardNightroomsHelpIcon {float: right;}
+#resMod .help img {vertical-align: top;}
+#resMod .corpIdContainer input,
+#resMod .iataContainer input {
+	clear: both;
+	display: block;
+}
+#resMod .brands,
+#resMod .searchBy,
+#resMod .advancedSearchContainerLanding .findHotel {
+	float: left;
+	margin: 1em 0 0 0;
+	width: 14em;
+}
+#resMod .amenities,
+#resMod .advancedSearchContainerLanding .findHotel {
+	float: left;
+	margin: 1em 0 0 0;
+}
+#resMod .advancedSearchContainerLanding .findHotel {
+	margin:1.8em 0 .5em 0;
+	width: 15em;
+}
+#homepage #resMod .advancedSearchContainerLanding .findHotel {
+	padding-left: 37px;
+}
+
+#resMod .amenities {margin-left: 1em; margin-left: 1.8em\9}
+#resMod fieldset {
+	border: 0 none;
+	margin: 0;
+	padding: 0;
+}
+#resMod legend {
+	font-size: 0.917em;
+	font-weight: bold;
+	padding: 0;
+}
+#resMod .brands ul,
+#resMod .amenities ul,
+#resMod .searchBy ul {
+	list-style: none;
+ 	margin: 0 auto;
+	padding: 0;
+}
+#resMod .brands label,
+#resMod .amenities label,
+#resMod .searchBy label {font-weight: normal;}
+#resMod input[type="checkbox"],
+#resMod input[type="radio"] {
+	margin: 0 2px 0 0;
+	vertical-align: middle;
+}
+
+/*-----------------------------*/
+/* Start - Park Stay Go Module */
+/*-----------------------------*/
+#parkStayGoModuleContainer {
+	float: left;
+	width: 330px;
+}
+#parkStayGoModuleContainer #resMod .findHotel {
+	float: right;
+}
+/*-----------------------------*/
+/* End - Park Stay Go Module */
+/*-----------------------------*/
+
+/* Destination Tool & Help Layers */
+.destToolLayer,
+.helpLayer {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	padding: 10px;
+	position: absolute;
+	max-width: 200px; /* For IE7 */
+	z-index: 5;
+	/* CSS3 */
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+* html .helpLayer {width: 200px;} /* For IE6, as max-width is not interpreted */
+.destToolLayer {
+	max-width: 400px;
+	padding: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+	z-index: 100;
+}
+* html .destToolLayer {width: 250px;} /* For IE6, as max-width is not interpreted */
+.destToolLayer ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.destToolLayer li {}
+.destToolLayer a {
+	background-color: #fff;
+	display: block;
+	text-decoration: none;
+}
+.destToolLayer #pcrProfile,
+.destToolLayer #resPcr_Profile,
+.destToolLayer #pcrFavorites,
+.destToolLayer #recentSearches,
+#clarifySearch ul {
+	max-height: 20em;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.destToolLayer #pcrProfile a,
+.destToolLayer #resPcr_Profile a {padding: 0.333em 1em 0.333em 2em;font-size:11px;}
+.destToolLayer #recentSearches a {padding: 0.25em 1em;font-size:11px;}
+.destToolLayer #pcrProfile a:hover,
+.destToolLayer #resPcr_Profile a:hover,
+.destToolLayer #recentSearches a:hover {
+	background-color: #4784be;
+	color: #fff;
+}
+.destToolLayer #pcrProfile a.active,
+.destToolLayer #resPcrProfile a.active,
+.destToolLayer #resPcr_Profile a.active {
+	background: transparent url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/icons/sprite/sprite.gif) no-repeat scroll 10px -933px;
+	color: #4784be;
+}
+.destToolLayer #pcrProfile a.active:hover,
+.destToolLayer #resPcrProfile a.active:hover,
+.destToolLayer #resPcr_Profile a.active:hover {
+	background-color: #4784be;
+	background-position: 10px -876px;
+	color: #fff;
+}
+.destToolLayer #recentSearches a.clearSearches,
+.destToolLayer #recentSearches a.clearSearches:hover {
+	background-color: #fff;
+	border-top: 1px dashed #ccc;
+	color: #4784be;
+	font-size: 0.917em;
+	text-decoration: underline;
+}
+.destToolLayer #pcrFavorites {
+	padding: 0 1em 0.333em;
+	width: 350px;
+}
+.destToolLayer #pcrFavorites h2,
+.destToolLayer #pcrFavorites h3 {font-weight: bold;}
+.destToolLayer #pcrFavorites h2 {
+	font-size: 1.167em;
+	margin-top: 0.5em;
+}
+.destToolLayer #pcrFavorites h3 {
+	color: #666;
+	font-size: 1em;
+	margin-top: 0.25em;
+}
+.destToolLayer #pcrFavorites ul {padding-left: 1.833em;}
+.destToolLayer #pcrFavorites a {
+	color: #4284bf;
+	cursor: pointer;
+  font-size: 1em;
+	text-decoration: underline;
+}
+.destToolLayer.hide,
+#destHelp.hide,
+#clarifySearch.hide,
+.helpLayer.hide { /* default style; position off-screen to avoid being totally hidden from screen readers */
+	left: -999em;
+	position: absolute;	
+}
+.helpLayer dl,
+.helpLayer dd {
+	margin: 0;
+	padding: 0;
+}
+.helpLayer dt {font-weight: bold;}
+
+/* Clarify & Destination Help Layer */
+#destHelp,
+#clarifySearch {
+	background-color: #fff;
+	border: 1px solid #bcafa9;
+	padding: 10px;
+	position: absolute;
+	width: 30.25em; /* needs to match TOTAL width of Enter Destination field */
+	z-index:1;
+}
+.HomeDestHelpParent {
+	position:relative;
+	margin:0; 
+	padding:0; 
+	overflow:visible;
+	clear:both\9;
+}
+#resMediaWrapper #destHelp {
+	background-color: #efefef;
+	margin-top: 20px;
+	margin-top: -142px\9;/*-125px\9;*/
+	/*margin-top: -11px\0/;*/
+	margin-left: -17px\9;
+	margin-left: -18px\0/;
+}
+#findAndBookContainer #destHelp {
+	background-color: #efefef;
+	margin-top: 20px;
+	margin-top: 23px\9;
+}
+#findAndBookContainer #destHelp.destHelpMod {
+	margin-top: 21px\9;
+	margin-top: 20px\0/;
+	margin-left: 0\9;
+}
+/* !important has been used for Clarify Pop Up Box at Home Page to set the position - IE Specific */
+#resModuleContainer #destHelp {
+	top:210px\9 !important;
+	left:17.5px\9 !important;
+}
+
+/*******************************/
+
+#destHelp .layerPointer {
+	background: transparent url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/icons/sprite/sprite.gif) scroll no-repeat 0 0;
+	height: 25px;
+	margin: -35px 0 10px 0;
+	width: 25px;
+}
+#destHelp h2 {
+	font-size: 1em;
+	font-weight: bold;
+}
+
+/* Flash/Hero Media */
+
+/* Marketing Modules */
+#marketingModuleContainer {
+	overflow: auto;
+	padding: 0;
+	width: 972px;
+}
+#marketingModuleContainer .marketingModule {
+	float: left;
+	padding: 0 1em;
+	width: 25em;
+}
+/* Static Content */
+#staticContentWrapper  h2,
+#staticContentWrapper  p {margin: 0;}
+#staticContentWrapper h2 {
+	color: #43a23b;
+	font-size: 1.5em;
+	font-weight: normal;
+	line-height: 1;
+	margin: 0 0 0.5em;
+}
+#staticContentWrapper .topContainer,
+#staticContentWrapper .bottomContainer {
+	border-top: 1px solid #ccc;
+	overflow: auto;
+}
+#staticContentWrapper .topContainer {
+	margin: 0.833em 0 0 0;
+	padding: 0.833em 0 2.5em;
+}
+#staticContentWrapper .bottomContainer {
+	margin: 0;
+	padding: 0.833em 0 0 0;
+}
+#popDestContainer {
+	float: left;
+	padding: 0 2.5em 0 0;
+	width: 54.2em;
+}
+#popDestContainer .cq-colctrl-lt9 {
+	margin: 1.25em 0 2.5em 0;
+	overflow: auto;
+}
+#popDestContainer .cq-colctrl-lt9 .parsys_column {
+	float: left;
+	margin: 0 20px 0 0;
+	padding:0;
+	width: 140px;
+}
+#popDestContainer .cq-colctrl-lt9 .image {margin: 0 0 0.833em 0;}
+#stayYou {
+	float: right;
+	width: 24.3em;
+}
+#pcrJoinNow,
+#findHotels,
+#signupEmailOffers {
+	float: left;
+	padding: 0;
+	width: 26em;
+}
+#findHotels {padding: 0 1.5em;}
+#signupEmailOffers form {overflow: hidden;}
+#signupEmailOffers input[type="text"] {
+	display: block;
+	font-size: 12px;
+	font-weight:600;
+	height: 1.5em;
+	margin: 0.5em 0;
+	padding:14px 0.25em 14px 0.25em;
+	width: 302px;
+	color:#666666;
+}
+#signupEmailOffers input[type="image"] {float: right;}
+/*-------------------------*/
+/* End - Homepage */
+/*-------------------------*/
+
+/*-------------------------*/
+/* Start - Find & Book */
+/*-------------------------*/
+#findAndBook {}
+#findAndBookWrapper {overflow: auto;}
+#findAndBookContainer {
+	float: left;
+	width: 407px;
+}
+#findAndBook #resMod .dates {width:100%\9;}
+#pslotContainer {
+	float: right;	
+	width: 510px;
+}
+/*-------------------------*/
+/* End - Find & Book */
+/*-------------------------*/
+
+/*-------------------------*/
+/* Start - Landing page */
+/*-------------------------*/
+#resMod .advancedSearchContainerLanding {
+	margin: 1em 0 0 0;
+	float: left;
+	width: 440px;
+}
+
+/*-------------------------*/
+/* End - Landing page */
+/*-------------------------*/
+
+/*-------------------------*/
+/* Start - Find and Book page */
+/*-------------------------*/
+#findAndBookContainer .advancedSearchContainerFBook{
+	background: #fff;
+	border: 0 none;
+	float: left;
+	margin: 1em 0 0 0;
+	overflow: auto;
+	padding: 1em;
+	width: 350px;
+}
+#resMod .findbookTeaser {
+    margin: 0 auto;
+    width: 365px;
+}
+#findAndBookContainer .outerConatiner{
+	border: 1px solid #BCAFA9; 
+	clear: both;
+	float: left;
+	padding: 10px;
+	width: 385px;
+}
+.resLeft {
+	float: left;	
+}
+
+/* TODO  remove  after clarification mockup implementation Start */
+#resMod .clarificationContent{
+	background: none repeat scroll 0 0 #FFFFFF;    
+	border: 1px solid #BCAFA9; 
+	max-height: 220px; 
+	overflow: auto; 
+	padding: 6px 10px 8px; 
+	position: absolute; 
+	width: 356px;
+	z-index:1;
+}
+#resMod .clarificationDetails{
+    color: #4784BE;
+    cursor: pointer;
+    display: list-item;
+    font-size: 11px;
+    list-style-type: circle;
+    margin-left: 35px;
+    padding: 0 0 0 5px;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+.recentSearchPopupContent {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #BCAFA9;
+	font-size:11px;
+    left: 238px;
+    max-height: 220px;
+    overflow: hidden;
+    padding: 6px 10px 8px;
+    position: absolute;
+    top: 21px;
+    width: 116px;
+    z-index: 2;
+}
+#recentSearchContent span {
+	float:left;
+	width:98%;
+}
+#recentSearchContent p {
+	float:left;
+	width:100%;
+	margin:0;
+	height:1px;
+	border-top:dotted 1px #aaa;
+}
+/* Profile and Fav. popups - Start */
+#userProfileContent,
+#favPopup {position:absolute;}
+#favPopup {left:153px; top:170px; z-index:2;}
+.profPopupContent {
+	background:#fff;
+	border: 1px solid #BCAFA9;
+	padding: 5px;
+	width:auto;
+	float:left;
+}
+.profPopupContent span {display:block;}
+#resMod .resLinks li.profile #userProfileContent a {
+	background: none;
+	padding: 0;
+}
+.profPopupContent span.default a {
+	color: #4784BE;
+	font-size: 11px;
+	text-decoration:underline;
+}
+.profPopupContent span.active a {color: #fff;}
+.profPopupContent span.active {
+	background: url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/cn/pcr/profile/0002.gif) no-repeat scroll 2px 50% #3078BD;
+	color: #009900;
+	padding: 5px 5px 5px 16px;
+}
+
+.favPopupContent {
+	max-height: 220px;
+	overflow: auto;
+	padding: 6px 10px 8px;
+	width: 270px;
+	border: 1px solid #BCAFA9;
+	background:#fff;
+}
+.favPopupContent span {display:block;}
+.favPopupSubhead {
+	color: #4784BE;
+	cursor: pointer;
+	font-size: 11px;
+}
+.favPopupMainhead {
+	color: #000000;
+	font-size: 14px;
+	font-weight: 700;
+}
+#favPopup a {
+	color: #4784BE;
+	font-size: 11px;
+	text-decoration:underline;
+}
+/* Profile and Fav. popups - End */
+
+/* TODO  remove  after clarification mockup implementation End */
+
+/*-------------------------*/
+/* End - Find and Book page */
+/*-------------------------*/
+
+.findHotel label,
+#lessSearchOptionsContainer .advanceSearchParent .findHotel label {
+	margin-left: 40px;
+	margin-top: 5px;
+	float: left;
+}
+/*#lessSearchOptionsContainer .advanceSearchParent .findHotel label {margin-left: 197px;}*/
+
+/* Displaying Error Message - Start */
+.errorContent p {
+	margin:0;
+	padding:0 23px 10px 1px;
+}
+#datesForm .errorContent p span {
+	color:#000;
+	font-size:12px;
+}
+.errmsg,
+.errmsgDetails {
+    float: left;
+    margin: 0;
+    width: 96%;
+}
+.error1 {
+	padding-left:15px;
+	background:#FFF9DF none repeat scroll 0 0;
+	border:1px solid #CC0000;
+	line-height:18px;
+	margin:10px 0;
+	float:left;
+	width:95%\9;
+}
+.errmsg{
+	background:transparent url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/cn/icons/alerts/0003.gif) no-repeat scroll 0 3px;
+	padding-left:15px;
+}
+#signupEmailOffers .error1 {width:92%;}
+/* Displaying Error Message - End */
+
+.findHotelBtn {
+	background: url(/hotels/images/btn_findHotel.gif) no-repeat 0 0; 
+	width: 116px; 
+	height: 24px; 
+	border: none;
+}
+
+/* Start - Clarify Your Search */
+#clarifySearchLanding #resModuleContainer {float: right;}
+#clarifySearchLanding .clarifySearchContent {
+	overflow: hidden;
+	width: 47.917em;
+}
+.clarifySearchContent .breadcrumb,
+.clarifySearchContent p,
+.suggestedDestContainer,
+.otherDestContainer {margin-bottom: 1em;}
+.clarifySearchContent h1 {margin: 1em 0 0.5em 0;}
+.clarifySearchContent dl,
+.clarifySearchContent dd,
+.clarifySearchContent ul {
+	margin: 0;
+	padding: 0;
+}
+.suggestedDestContainer {overflow: hidden;}
+.suggestedDest {float: left;}
+.suggestedDest dt {
+	color: #43a23b;
+	font-weight: bold;
+}
+.suggestedDest dt,
+.suggestedDest dd {margin: 0 0 0 1em;}
+.thumbNail {float: left;}
+.otherDestContainer {overflow: hidden;}
+.otherDestContainer h2 {
+	font-size: 1em;
+	font-weight: bold;
+	margin: 1em 0;
+}
+.otherDestContainer ul {list-style-type: none;}
+.otherDestContainer li {margin: 0.25em 0;}
+/* End - Clarify Your Search */
+
+#pcrJoinNow .image {
+	float:left;
+	width:100%;
+}
+#langMain {z-index:5500;}
+
+#resMod #destinationBoxFNB {
+	/*position:relative\9;*/
+	overflow:visible\9;
+}
+#destinationBoxFNB #clarifySearch {
+	/*left:0\9;*/
+	top:46px !important;
+}
+#resMod h1.resTitle {
+	display: none;
+}
+
+/* Flash/Hero Media */
+#homepageMediaContainer {
+	display: block;
+	height: 400px;
+	left: -14px;
+	position: relative;
+	top: 0;
+	width: 1000px;
+	*width:auto;
+}
+
+#homepageMediaContainerFlash {display:block; float:right;}
+
+/* Default Home Page static image - used if no DAY content available/successful */
+.ad-image-static {
+	left: 29px;
+	top: 29px;
+}
+
+
+
+
+body {
+	color: #444444;
+	font: normal normal normal 12px/1.5 Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #FFFFFF;
+}
+
+#brandBarWrapper
+{
+display:none;
+}
+
+/*
+#homepage {overflow-x:hidden;}
+html {overflow-x:hidden\9;}
+*/
+
+#wrapper {
+	margin: 0 auto;
+	width: 972px; /* Total page width = 972/12px = 81em */
+}
+
+#contentWrapper {
+	overflow: hidden;
+	padding: 2em 0 4.583em 0;
+}
+
+/* Start - Generic Elements */
+h1, h2, h3, h4, h5, h6, p {
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2 {
+	font-size: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #000;
+}
+
+h3 {
+	font-weight: bold;
+}
+
+.termsHead {
+	color: #000;
+}
+
+.termsCopy {
+	font-size: 0.833em;
+	line-height: 1.333;
+}
+
+a {
+	text-decoration: underline;
+}
+
+/*
+a.external {
+	background: transparent url(../images/sprites.gif) no-repeat scroll 100% -443px;
+	padding-right: 13px;
+}
+*/
+
+a img {
+	border: none;
+}
+
+select,
+textarea {
+	border: 2px inset;
+	font-size: 0.917em;
+	padding: 0.303em;
+}
+
+input[type="text"],
+input[type="password"] {
+	background: #fff url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/backgrounds/0008.gif) repeat-x scroll 0 100%;
+	border: 2px inset;
+	font-size: 1em;
+	height: 1.333em;
+	line-height: 1.333em;
+	margin: 0;
+	padding: 0.25em;
+	width: 9em;
+}
+
+a img {
+	border: none;
+}
+/*qc#134096 - Has been set a cursor default for res Direct Number*/
+label {
+	cursor: default;
+}
+
+select.error,
+textarea.error,
+input[type="text"].error,
+input[type="password"].error {
+	border: 2px inset #c00;
+}
+
+/* End - Generic Elements */
+
+/* Start - Convenience Classes */
+/* Use clearfix where 'overflow: hidden/auto' does not work cleanly */
+.clearfix:after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+*+html .clearfix {
+	height: 1%;
+}
+
+/* Hides from IE-mac \*/
+* html .clearfix {
+	height: 1%;
+}
+
+/* End hide from IE-mac */
+
+/* TODO: Remove after converting all instances to 'overflow: hidden/auto' or clearfix */
+.clearingDiv {
+	clear: both;
+	font-size: 1%;
+	height: 0px;
+}
+
+.hideHelpDlg {
+	display: none;
+}
+
+.hide {
+	display: none !important;
+}
+
+.initiallyHidden {
+	display: none;
+	opacity: 0;
+	filter:alpha(opacity=0);/*for IE*/
+}
+
+.control {
+	cursor: pointer;
+}
+
+.errorWrapper .error1 {
+	padding: 1em;
+	margin: 0 0 1.5em 0;
+	*margin: 0 1.5em 1.5em 0;/*for IE7*/
+	float: none;
+}
+
+.errorWrapper .error1 .errmsg, .errmsgDetails {
+	float: none;
+}
+
+/*
+position off-screen to avoid being totally hidden from screen readers,
+add width/height to collapse whitespace
+*/
+.accessibleHide {
+	height: 1px;
+	left: -999em;
+	position: absolute;
+	width: 1px;
+}
+
+/* End - Convenience Classes */
+
+
+/*Begin Global home page styles*/
+.homePageHero {
+	height: 300px;
+}
+
+/*End Global home page styles*/
+
+
+/* Begin - Global Book With Confidence */
+
+.BWCHelpHeader {
+	color: #000;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 0 0 8px 0;
+	padding: 0;
+	text-align: left;
+}
+
+.helpLayer.BWCHelpPanel {
+	background-color: #A6D2A2;
+	background-image: url("http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/backgrounds/0005.gif");
+	background-repeat: no-repeat;
+	background-position: 0% 100%;
+	border: 1px solid #BCAFA9;
+	padding: 10px;
+	width: 261px;
+}
+
+.helpLayer,
+#changeReservation .helpLayer,
+.linkDesc {
+	-moz-border-radius: 5px 5px 5px 5px;
+	background-color: #FFFFFF;
+	border: 1px solid #CCCCCC;
+	max-width: 200px;
+	padding: 10px;
+	position: absolute;
+	z-index: 2000 !important;
+}
+
+#destHelp .closeControl,
+#clarifySearch .closeControl,
+.helpLayer .closeControl.layerHead {
+	background: transparent url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/icons/sprite/sprite.gif) no-repeat scroll 100% -1064px;
+	display: block;
+	float: right;
+	outline: 0 none;
+	padding: 0;
+	text-indent: -999em;
+	width: 15px;
+	margin: -5px -5px 5px 0;
+}
+
+.closeControl.layerHead {
+background: transparent url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/icons/sprite/sprite.gif) no-repeat scroll 100% -1064px;
+display:block;
+float:right;
+outline:0 none;
+padding:0;
+text-indent:-999em;
+width:15px;
+margin:-5px -5px 5px 0;
+}
+
+.helpLayer .closeControl.layerFoot {
+	background: url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/en/us/hd/buttons/0010.gif) no-repeat scroll 0 0 transparent;
+	display: block;
+	height: 18px;
+	margin: 10px auto 5px;
+	outline: 0 none;
+	padding: 0;
+	text-indent: -999em;
+	width: 53px;
+}
+
+.BWCHelpHeader p {
+	font-weight: bold;
+}
+
+/* End - Global Book With Confidence */
+
+/* Start  - Browser upgrade window */
+div#browserUpgradeWrapper {
+	border: 3px solid #ddd;
+	padding: 0px 0px 20px 20px;
+	width: 700px;
+	z-index: 8001;
+	background-color: #FFFFFF;
+	left: 25%;
+	position: absolute;
+	top: 25%;
+}
+
+#browserinfo {
+	background-color: #F8F8F8;
+	float: left;
+	height: 145px;
+	margin-right: 20px;
+	padding-top: 10px;
+	width: 240px;
+	text-align: center;
+	border: 1px solid #CCCCCC;
+	font-size: 20px;
+	font-weight: bold;
+	padding-top: 15px;
+}
+
+.browserUsing {
+	font-size: 3.167em;
+	font-weight: bold;
+	font-family: arial;
+}
+
+.browserName {
+	font-size: 3.5em;
+	font-weight: bold;
+	font-family: arial;
+}
+
+div#browserUpgradeWrapper .parsys_column.cq-colctrl-lt3-c1 {
+	float: left;
+	width: 355px;
+}
+
+div#browserUpgradeWrapper .parsys_column.cq-colctrl-lt3-c0 {
+	float: left;
+	width: 250px;
+}
+
+#browserUpgradeWrapper h2 {
+	font-size: 1.5em;
+	color: #000;
+	font-weight: bold;
+	font-family: arial;
+	margin: 0;
+}
+
+#browserUpgradeWrapper h3 {
+	font-size: 1.33em;
+	color: #000;
+	font-weight: bold;
+	font-family: arial;
+	margin: 0 0 10px 0;
+	clear: both;
+	width: 600px;
+}
+
+#browserUpgradeWrapper a,
+#browserUpgradeWrapper a:hover {
+	color: #4784be;
+}
+
+#browserinfo table td,
+#browserinfo table {
+	text-align: center;
+	width: 240px;
+}
+
+#browserUpgradeWrapper div.cq-colctrl-lt3,
+#browserUpgradeWrapper div.cq-colctrl-lt3-c1 {
+	height: auto;
+}
+
+div#browserUpgradeWrapper div.cq-colctrl-lt3-c1 {
+	width: 50%;
+}
+
+div#browserUpgradeWrapper div.section {
+	float: left;
+}
+
+div#browserUpgradeWrapper div.basichtml.section {
+	float: right;
+	margin-right: 20px;
+	margin-top: 10px;
+}
+
+.browserUsing,
+.browserImage,
+.browserName {
+	padding: 5px;
+}
+
+div#closeBrowserUpgrade {
+	float: right;
+	cursor: pointer;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+/* end browser upgrade styles */
+div#hicv {
+	margin: 0;
+	display: none;
+}
+
+div#heartz {
+	margin: 0 0 30px 0;
+}
+
+#confRateSummary {
+	padding: 10px;
+	background-color: #F5F5F5;
+	font-size: 11px;
+	width: 540px;
+	margin-top: 10px;
+}
+
+#confRateSummary dt {
+	font-weight: bold;
+	width: 135px;
+}
+
+.formContainer_large dl dt.optionalterm {
+	background: none;
+}
+
+ul.userActions li a.confirmationAddCalendarLink {
+	background: transparent url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/cn/icons/sprite/common_icons.gif) no-repeat scroll 0 -866px;
+}
+ul li a.email {
+	background: transparent url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/cn/icons/resconf/0007.gif) no-repeat scroll 0 9px;
+	margin-right: 20px;
+}
+ul li a#printConfSummary.email {
+	background: transparent url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/cn/icons/resconf/printer_blue.jpg) no-repeat scroll 0 6px;
+	margin-right: 20px;
+	display: none;
+}
+
+ul li a#printConfDetails.email {
+	background: transparent url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/cn/icons/resconf/printer_green.jpg) no-repeat scroll -2px 6px;
+	margin-right: 20px;
+}
+
+ul li a.sms {
+	background: transparent url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/cn/icons/resconf/0009.gif) no-repeat scroll 0 6px;
+	margin-right: 20px;
+}
+
+ul.userActions li a.changeReservation {
+	background: transparent url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/cn/icons/staymgt/0003.gif) no-repeat scroll 0 6px;
+	margin-right: 7px;
+}
+
+ul.userActions li a.cancelReservation {
+	background: transparent url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/cn/icons/staymgt/0002.gif) no-repeat scroll 0 6px;
+}
+
+ul.userActions li a.duplicateReservation {
+	background: transparent url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/cn/icons/staymgt/0013.gif) no-repeat scroll 0 6px;
+}
+
+ul.userActions li a.makeReservation {
+	background: transparent url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/cn/icons/staymgt/0009.gif) no-repeat scroll 0 6px;
+}
+
+ul.userActions li a.viewReservations {
+	background: transparent url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/cn/icons/staymgt/0014.gif) no-repeat scroll 0 6px;
+	margin-right: 20px;
+}
+
+.canResSpinner{
+		padding-left: 10px;
+	}
+
+
+#pageDayContentPanel.fbTeaser .marketingModule #contentArea {
+	height: 120px;
+}
+
+#pcrCardAndBanner {
+	width: 970px;
+    margin-top:100px;
+}
+
+#pcrCardAndBanner #annonymousPCRCard {
+	width: 535px;
+	float: left;
+	margin-right: 20px;
+	padding: 10px;
+	border: 1px solid #BCAFA9;
+}
+
+#confdetail #annonymousPCRCard h3 {
+	border-bottom: none;
+	margin-top: 5px;
+}
+
+#pcrCardAndBanner #confBanner {
+	float: left;
+}
+
+.confirmInfopage .pcrChat.pcrChatConfirmation {
+	width: 300px;
+}
+
+#mapInfo {
+	z-index: 2;
+}
+
+span.vatRate,
+span.varRate.priceSort,
+span.varRate.roomSort {
+	font-size: 12px;
+	font-weight: normal;
+}
+
+div.popupCloseImg {
+	text-align: center;
+	clear: both;
+	margin-top: 10px;
+}
+
+/* styles start for improving Ie6  UI for reservation flow */
+*html .sideColumn_callout #searchHotel {
+	width: 265px;
+	overflow: hidden;
+}
+
+*html #sidebarContainer.guestInfo {
+	margin-right: 1em;
+	overflow: hidden;
+}
+
+*html #sidebarContainer.paymentInfo {
+	margin-right: 1em;
+	overflow: hidden;
+	width: 240px;
+	border: 2px solid red;
+}
+
+*html .paymentInfoHeadingWrap {
+	width: 450px;
+}
+
+*html div.formContainer_large.paymentInfo {
+	width: 450px;
+	margin-left: 0px;
+}
+
+*html .paymentInfo .sideColumn_callout {
+	width: 240px;
+	overflow: hidden;
+}
+
+*html #sidebarContainer {
+	width: 250px;
+	overflow: hidden;
+}
+
+*html .sideColumn_callout .contents {
+	width: 240px;
+	overflow: hidden;
+}
+
+*html .sideColumn_callout .contents ul {
+	margin-left: 4px;
+}
+
+*html ul.sideBy_side li select {
+	margin-right: 3px;
+}
+
+*html #destinationBoxSR #destination {
+	width: 18em;
+}
+
+*html .sideColumn_callout .contents p select {
+	width: 240px;
+}
+
+/* styles end for improving Ie6  UI for reservation flow */
+
+/* styles for new cancellation page */
+
+/* styles for new cancellation page */
+#changeReservation .resSummaryLabel,
+#changeReservation .resPolicyLabel,
+#changeReservation .resCancelActionLabel {
+	color: #000;
+	font-size: 1.5em;
+	margin-bottom: 0;
+	margin-left: 0;
+	padding: 0 0 0.4em 0;
+	width: 965px;
+}
+#changeReservation .resPolicyLabel .rateShortName {color: #000;}
+
+div.resSummary div.resHotel {
+	float: left;
+	margin-bottom: 3em;
+	width: 38em;
+}
+
+div.resSummary div.resDates {
+	float: right;
+	width: 35em;
+	margin-top: 43px;
+}
+
+div.resSummary div.resDates dt {
+	float: left;
+	font-weight: bold;
+	margin-right: 2em;
+	text-align: right;
+	width: 15em;
+}
+
+div.resSummary div.resHotel dt {
+	float: left;
+	margin-right: 25px;
+}
+
+div.resSummary div.resHotel dd {
+	float: left;
+	margin: 0;
+}
+
+div.resPolicy dt {
+	float: left;
+	font-weight: bold;
+	width: auto;
+}
+
+div.resPolicy dd {
+	float: left;
+	margin-left: 15px;
+	width: 50em;
+}
+
+#cancelResSubmit {
+	margin-top: 15px;
+}
+
+#changeReservation div.confNumber {
+	margin-bottom: 0px;
+	background-color: #eee;
+	padding: 5px 10px 5px 10px;
+}
+
+#changeReservation .confNumber
+{
+width:950px;
+}
+
+#cancelResBox {
+	margin-top: 15px;
+}
+
+a.doNotCancel {
+	position: relative;
+	top: -7px;
+}
+
+.cancel.resError {
+	margin-bottom: 0px;
+}
+
+#cancelRes.cancelFlow {
+	float: left;
+	margin-top: -10px;
+}
+
+#cancelheader h1.header {
+	float: left;
+}
+
+/* styles end for new cancellation page */
+
+/* fix for rfb #106419*/
+#chat .socialMediaToolbar {padding-top: 15px;}
+
+/* fix for rfb #105706*/
+#resPriceDetailsPopupContent dl.priceInfo.pcrPointBdr dt {
+	width: 350px;
+}
+
+#resPriceDetailsPopupContent dl dt{
+	width: 43%;	
+}
+#resPriceDetailsPopupContent dl dd{
+	margin-left: 10px !important;
+	margin-right: 0px !important;	
+}
+#resPriceDetailsPopupContent dl.priceInfoMulti dt{
+	width: 70% !important;	
+}
+#resPriceDetailsPopupContent dl.priceInfo.pcrPointBdr{
+	float: left;		
+}
+#resPriceDetailsPopupContent dl.priceInfo.pcrPointBdr.pcrPointNoBdr{
+	border-top:0px solid #bcafa9 !important;
+}
+
+dd.guestName,
+dt.guestName {
+	margin-top: 10px;
+}
+
+.resPolicy .headingText {
+    float: left;
+    margin-right: 1em;
+    width: 130px;
+    word-wrap: break-word;
+}
+.resPolicy .policyInfo {
+	float: left;
+	width: 700px;
+}
+
+/* end fix for rfb #105706*/
+
+/* styles start for new upcoming reservation page */
+
+
+.upcommingLeftCol
+{
+float:left;
+width:705px;
+}
+
+.reservationsWrapper .hotelInfo
+{
+float:left;
+}
+
+*+html .reservationsWrapper .hotelInfo
+{
+margin-bottom:15px;
+}
+
+.reservationsWrapper .hotelLinks
+{
+float:right;
+margin-top:20px;
+width:215px;
+}
+
+.reservationsWrapper .hotelLinks ul li
+{
+list-style-type:none;
+font-weight:bold;
+line-height:24px;
+}
+
+.upcommingRightCol {
+    float: right;
+    margin-top: 25px;
+    width: 234px;
+}
+
+
+.upcommingRightCol h1 {
+    background: url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/icons/sprite/sprite.gif) repeat-x scroll 0 -75px transparent;
+    cursor: pointer;
+    font-size: 1.083em;
+    height: 32px;
+    line-height: 32px;
+    margin: 0;
+    padding: 0 0 0 10px;
+    vertical-align: middle;
+	font-weight:bold;
+}
+
+.upcommingRightCol .stayLandingSubmit
+{
+margin-left:0;
+margin-top:10px;
+}
+
+.upcommingRightCol dt.label
+{
+font-weight:bold;
+margin-top:10px;
+}
+.upcommingRightCol dt.reqdLabel
+{
+color:#ccc;
+font-size:11px;
+}
+
+
+/*
+.upcommingRightCol #stayLandingFormBean
+{
+padding:5px 10px 10px 10px;
+border:1px solid #ccc;
+}
+*/
+.upcommingRightCol div.upcommingRightColInner
+{
+padding:5px 10px 10px 10px;
+border:1px solid #ccc;
+}
+
+.upcommingLeftCol .hotelImage
+{
+float:left;
+margin-top:20px;
+margin-right:10px;
+}
+.upcommingLeftCol div.hotelInfoRightWrapper
+{
+float:left;
+margin-top:20px;
+margin-bottom:20px;
+width:330px;
+}
+
+.upcommingLeftCol div.hotelInfoRightWrapper.cancelled
+{
+width:auto;
+}
+
+.upcommingLeftCol div.hotelInfoRightWrapper div.checkInInfo
+{
+margin-top:10px;
+}
+
+.manageResHeading
+{
+width:980px;
+float:left;
+}
+
+.manageResHeading p.nearestOffLabel
+{
+float:left;
+width:620px;
+}
+.manageResHeading h1
+{
+margin-bottom:10px;
+}
+
+.upcommingLeftCol h2
+{
+border-bottom:1px solid #ccc;
+margin-bottom:10px;
+}
+
+.viewAccountHistory
+{
+margin-top:10px;
+margin-bottom:40px;
+padding:6px;
+background-color:#ddd;
+clear:both;
+}
+
+.viewAccountHistory a
+{
+background: url("/hotels/images/sprites.gif") no-repeat scroll 100% -444px transparent;
+padding-right:13px;
+font-weight:bold;
+}
+
+p.fieldsRequired
+{
+font-size:0.9em;
+color:#999;
+margin-bottom:10px;
+}
+
+.confirmationInfo
+{
+clear:both;
+/*background-color:#f7f7f7;*/
+background-color:#EEEEEE;
+padding:6px;
+}
+
+.reservationsWrapper .hotelLinks ul.upcomingActions
+{
+padding-left:0px;
+}
+span.headingText.red
+{
+color:red;
+}
+
+.manageResHeading .pcrChat.pcrChatConfirmation
+{
+height:74px;
+padding-top:18px;
+width:238px;
+padding-right:0px;
+}
+
+.upcommingRightCol input[type="text"]
+{
+width:12.6em;
+}
+
+
+/* styles end for new upcoming reservation page */
+
+#mediaLargePhotoDialog2
+{
+position:absolute;
+left:-9999px;
+border:1px solid #ccc;
+padding:10px;
+background-color:#fff;
+z-index:100;
+width:530px;
+}
+#mediaLargePhotoDialog2.searchResults
+{
+width:650px;
+backgrround:url("/hotels/images/photogallery.jpg") no-repeat;
+}
+
+#mediaLargePhotoDialog2 .closeContainer
+{
+float:right;
+margin-right:15px;
+cursor:pointer;
+position:relative;
+left:11px;
+}
+
+#mediaLargePhotoDialog2 .closebtnalign
+{
+cursor:pointer;
+margin-top:25px;
+text-align:center;
+width: 100%;
+}
+#mediaLargePhotoDialog2.searchResults .closebtnalign
+{
+margin-top:-25px;
+}
+
+        
+        
+          
+           #mediaLargePhotoDialog2 .content{font:12px/1.4 "helvetica neue",arial,sans-serif;width:520px;margin:20px auto;}
+        
+            .cred{margin-top:20px;font-size:11px;}
+            
+            /* This rule is read by Galleria to define the gallery height: */
+            #galleria{height:430px;}
+            
+ .galleria-thumb-nav-right {
+    background: url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/en/us/hd/photo/0004.gif);
+    background-repeat: no-repeat;
+	background-position:0px 12px;
+}
+
+ .galleria-thumb-nav-left {
+   background: url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/en/us/hd/photo/0002.gif) ;
+    background-repeat: no-repeat;
+	background-position:0px 12px;
+}
+
+.galleria-thumb-nav-right.disabled
+{
+ background: url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/en/us/hd/photo/0003.gif) ;
+    background-repeat: no-repeat;
+	background-position:0px 12px;
+}
+
+.galleria-thumb-nav-left.disabled
+{
+ background: url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/en/us/hd/photo/0001.gif) ;
+    background-repeat: no-repeat;
+	background-position:0px 12px;
+}
+
+.galleria-image img
+{
+top:0px!important;
+}
+
+
+p.freeBreakfast img
+{
+margin-right:1px;
+position:relative;
+top:1px;
+}
+
+/* styles for new pslots added on rates, search results & confirmation page */
+
+#LIRGRatesRateSort .image ,#LIRGSearchResults .image , .LIRGSearchResultsLeftNav .image , .LIRGGuestInfoLeftNav .image , .cancelReservationOffer .image, #LIRGConfirmationRightNav .image
+{
+float:none;
+}
+
+.galleria-stage .galleria-image
+{
+overflow:hidden;
+height:350px!important;
+}
+#fpHDPageBodyLeftContainerLeftPane div div#mediaLargePhotoDialog2 img#searchPhotoViewLoading{
+	position: relative;
+	top: 266px;
+	left:45%;	
+}
+#LIRGSearchResults
+{
+/* height:40px; */
+text-align:right;
+margin-right:23px;
+}
+
+#LIRGSearchResults p
+{
+font-weight:bold;
+}
+
+.LIRGSearchResultsLeftNav ,  .LIRGGuestInfoLeftNav
+{
+position:relative;
+}
+.LIRGRatesRateSort , .LIRGRatesPriceSort , .LIRGRatesRoomSort
+{
+margin-top:4px;
+padding:10px;
+}
+
+
+#LIRGGuestInformation .image
+{
+float:none;
+margin-top:40px;
+}
+
+#LIRGConfirmationPriceSummary .image{
+float:none;
+width:635px;
+overflow:hidden;
+}
+
+#LIRGHotelDetailsOverview
+{
+margin-top:10px;
+float:left;
+}
+
+.highLightedDiv.valetFee, .highLightedDiv.petFee, .leftCol.parkingFee , .parkingFee
+{
+width:560px;
+}
+
+#cancelReservationOffer
+{
+position:relative;top:-10px;margin-bottom:10px;width:800px;
+}
+
+.formContainer_large p label.processImage
+{
+text-align:left;
+margin-left:10px;
+}
+
+#confirmationProcessImage
+{
+margin-left:10px;
+}
+/*
+img#hotelProcessingImage
+{
+position:relative;
+top:5px;
+}
+*/
+span.bookHotelBtnContainer{
+	float: right; 
+	padding-top: 10px;
+}
+span.bookHotelBtnContainer span{
+	float: left
+}
+/*img.roomRatesProcessImage
+{
+position:relative;
+top:15px;
+left:-10px;
+} */
+.rate span.roomrateBtnContainer{
+	float:right; width: 100%;
+}
+.rate span.roomrateBtnContainer span.processingImage{
+	float:left;margin-top: 15px; margin-right: 5px; margin-left: 30px;
+}
+.rate span.roomrateBtnContainer span.processingInput{
+	float: right;
+}
+
+span.signInBtn img.roomRatesProcessImage
+{
+top:0px;
+left:10px;
+}
+
+
+.hotelListing img.roomRatesProcessImage
+{
+position:relative;
+top:-5px;
+left:10px;
+}
+.hotelListing .extras  p{
+	cursor: pointer;	
+}
+.hotelListing .extras p img.magnify{	
+	position: relative;
+	left: -17px;
+	top:-1px;
+	cursor: pointer;
+}
+
+
+#rateRulePopupContent dl dt
+	{
+	float:left;
+	font-weight:bold;
+	}
+	#rateRulePopupContent dl dd , #resPriceDetailsPopupContent dl dd
+	{
+	float:left;
+	}
+	
+	#rateRulePopupContent dl dd
+	{
+	   margin-left: 15px;
+    width: 300px;
+	}
+	
+	#rateRulePopupContent dl , #resPriceDetailsPopupContent dl
+	{
+	clear:both;
+	padding-top:10px;
+	}
+ #resPriceDetailsPopupContent dl dt
+ {
+ float:left;
+ }
+ 
+	#resPriceDetailsPopupContent dl dd
+	{
+	margin-right:15px;
+	}
+	#resPriceDetailsPopupContent h4
+	{
+	clear:both;
+	}
+	.hotelListing .header ul li{
+	line-height: 50px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	float: left;
+	height: 50px;
+	vertical-align: middle;	
+	}
+	
+	.hotelListing .header ul li.addToFavorite{
+		margin-left: 46px;
+		width: 120px;
+	}
+	.hotelListing .header ul li div.compareBtnContainer{
+		float:left; 
+		width: 100%;		
+	}
+	.hotelListing .header ul li div div.compareCount{
+		font-weight: bold;
+		width: 50px;
+		float: left;	
+	}
+	.hotelListing .header ul li div div.spinnerDiv{
+		float:left;
+		width: 10%;
+	}
+	.hotelListing .header ul li.smokeNonsmoke{
+		margin-left: 30px;
+		width: 28px;
+	}
+	.hotelListing .header ul li.hotellogo{
+		width: 110px;
+	}	
+	.hotelListing .header ul li.compareCheckbox
+	{
+		width:25px;	
+		margin-left:20px; 
+		margin-right: 5px;
+		text-align:left;
+		font-weight:bold;		
+		margin-top: 10px;
+		margin-top: 7px\9;
+		height: 40px !important; 
+		line-height: 40px !important;		
+	}
+	.hotelListing .header ul li div.compareBtnContainer div{
+		float: left;
+	    position: relative;
+	    top: 2px;
+	}
+
+.sideColumn_callout .contents .sideBy_side .calDesc span.changeDate{
+	line-height: 22px ! important;	
+}
+.sideColumn_callout .contents .sideBy_side .calDesc span.changeDate #guestInfoChangeDate{
+	padding-right: 10px;
+}
+
+/********************************************
+start intestitial language country  styles 
+*********************************************/
+
+#langCtryPushDownContainer, #langCountryIntestitialConfirm  {
+	margin: 0 auto;
+    width: 972px;
+    height: 65px;
+    display: none;
+   	background: url("/hotels/images/country_lang_background.jpg") repeat;
+   	margin-top: 5px;
+   	margin-bottom: 5px;
+}
+
+#langCtryPushDownContainer .closeControl.layerHead, #langCountryIntestitialConfirm .closeControl.layerHead {
+	margin: 5px 5px 5px 0px; 
+}
+
+.langSelectionPointerArrow {
+		float:right; 
+		margin-right:20px; 
+		position:relative; 
+		right:50px; 
+		top: -25px;
+}
+
+.interLangF1 {
+	font-weight: bold;
+	color: #FFF;
+	font-size: 16px;
+}
+
+.interLangF2 {
+	color: #FFF;
+	font-size: 14px;
+}
+
+.interLangSel {
+	color: #FFF;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#ui-datepicker-div
+{
+z-index:6000!important;
+}
+
+.photoMenu
+{
+width:625px;
+display: none;
+position:relative;
+top:-25px;
+border-bottom:1px solid #ccc;
+height:66px;
+}
+
+*+html .photoMenu
+{
+height:66px;
+width:655px;
+}
+
+
+.photoMenu a
+{
+border-left:1px solid #ccc;
+cursor:pointer;
+padding:5px 10px 10px 10px;
+text-decoration:none;
+}
+
+.photoMenu a.photo_overview
+{
+border-left:none;
+}
+
+*+html .photoMenu a
+{
+padding:5px 5px 0px 6px;
+}
+
+
+
+.searchResults #galleria
+{
+position:relative;
+top:-25px;
+
+}
+
+
+.hotelListing .photoMenu h3
+{
+margin-bottom:30px;
+margin-left:10px;
+font-size:13px;
+margin-top:-10px;
+float:left;
+}
+
+.photoMenu a.selected
+{
+padding-top:10px;
+font-weight:bold;
+background-color:#83C039;
+color:#fff;
+
+text-decoration:none;
+position:relative;
+left:-1px;
+-webkit-border-radius: 8px 8px 0px 0px;
+-moz-border-radius: 8px 8px 0px 0px;
+border-radius: 8px 8px 0px 0px;
+-moz-background-clip: padding;
+-webkit-background-clip: padding-box;
+background-clip: padding-box;
+}
+
+*+html .photoMenu a
+{
+padding-bottom:15px;
+line-height:25px;
+}
+
+*+html .photoMenu a.selected
+{
+padding-top:7px;
+padding-bottom:7px;
+line-height:16px;
+
+}
+
+*+html #mediaLargePhotoDialog2.searchResults .closeContainer
+{
+position:relative;
+top:-30px;
+}
+
+
+p.expandedDetails_close
+{
+margin-bottom:10px;
+}
+
+span.hotelLogo img
+{
+float:left;
+}
+
+#mediaLargePhotoDialog2.searchResults .content
+{
+margin-top:0px;
+}
+li.recentSearchHeader{
+	font-size : 1em;
+	font-weight: bold;
+	padding: 3px 0px 0px 5px;
+	margin-bottom: 2px;	
+}
+p.recentSearchDates{
+	color: #9999CC;
+	font-size: 0.917em;
+	width: 100%;
+	margin-top: -5px;
+}
+.recentSearchseperater{
+	border-top: 1px dotted #4784BE;
+	padding-top: 3px;
+	float: left;
+	width: 100%;
+	margin-top:3px;
+}
+
+.ui-state-hover p.recentSearchDates{
+	color: #fff;
+}
+.avgNightlyRateText a.avgNightlyRateHelpIcon{
+	float:left;
+	margin-right: 2px;
+}
+.avgNightlyRateText p {
+	float: right;
+}
+.avgNightlyRateText p label{
+	float:left;
+}
+/*.langCountryIntestitial, .langCountryIntestitialConfirm{
+	 background: url("http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/ex/cn/backgrounds/lang_pref/countries_bg.jpg") no-repeat scroll right top #FFFFFF;
+	width: 820px;
+	height: 450px;
+	padding: 15px;
+}
+
+#brandLogoInterstitial{
+	float: left;
+	width: 820px;
+}
+
+#leftLangCombinations dt{
+	height:20px;
+}
+
+.interLangF2{
+	font-weight: bold;
+	color: #4784BE;
+}
+
+.interLangF3{
+	color: #4784BE;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.customizeYourExp{
+	color:#43A23B;
+	font-weight: bold;
+	font-size: 16px;
+	
+}
+
+.interLangF4{
+	font-size: 12px;
+	margin-bottom:10px;
+}
+
+.interLangF5{
+	font-size: 15px;
+	
+}
+
+.interLangF6{
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.interLangF7{
+	color:#43A23B;
+	font-weight: bold;
+	font-size: 36px;
+}
+
+.interLangF8{
+	color:#43A23B;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.interLangF9{
+	font-size: 23px;
+}
+
+#engLangCombinations, #espLangCombinations, #eurLangCombinations, #aspLangCombinations, #allLangCombinations{
+	float: left;
+	padding-left: 20px;
+	padding-right: 20px
+}
+
+#allLangCombinations {
+    border: 1px solid #CCCCCC;
+    float: right;
+    margin-right: 15px;
+    width: 200px;
+}
+
+select#idCountryResidence
+{
+margin-bottom:15px;
+}
+
+
+select#idCountryResidence , select#idPreferredLanguage
+{
+width:200px;
+}
+
+
+#customizeYourExpHeader
+{
+width:500px;
+}
+
+#helpChangeLangImage,#changeYourSettingsInterstitial {
+	float: right;
+	padding: 20px;
+	padding-bottom: 5px;
+	width: 344px;
+}
+
+#changeYourSettingsInterstitial {
+	padding-top: 0px;
+}
+
+#youHaveSelectedInterstitial
+{
+	width:400px;
+	clear:both;
+}
+
+.youHaveSelected{
+	width:400px;
+	border-bottom: 2px solid #CCC;
+}
+
+.clearFloats
+{
+	clear:both;
+}
+
+#leftcol{
+	float: left;
+	width: 400px;
+}
+
+#rightcol{
+	float: right;
+	width: 400px;
+}
+
+.selCtryLangDispTable{
+	width: 400px;
+}
+
+#thankYouInterstitial, #returnToLangPrefInterstitial, #continueToParentPage {
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 400px
+}*/
+/********************************************
+end intestitial language country styles
+*********************************************/
+
+/*start popup layer rules*/
+.layer {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    padding: 1em;
+    position: absolute;
+    z-index: 10;
+}
+
+.layer h3 {
+	font-weight: bold;
+	margin: 1em 0;
+	font-size: 1.25em;
+	line-height: 1.5em;
+}
+
+.layer h4 {
+	font-weight: bold;
+	line-height: 1.5em;
+	margin-top: 1.67em;
+}
+
+.criteriaForm .row {
+    margin: 1em 0;
+    overflow: hidden;
+}
+
+* html .criteriaForm .row {
+    clear: both;
+}
+
+.criteriaForm img.calendar {
+    position: relative;
+    top: 10px;
+}
+	
+.criteriaForm .adults, .criteriaForm .children, .criteriaForm .rooms {
+    float: left;
+    margin-right: 2em;
+}
+
+.criteriaForm .children {
+    text-align: center;
+}
+
+.criteriaForm .rooms {
+    margin: 0;
+}
+
+.criteriaForm .acr label {
+    cursor: pointer;
+    display: inline;
+    font-size: 0.917em;
+    font-weight: bold;
+    margin: 0 0.5em 0 0;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.criteriaForm .acr select {
+    padding: 0.25em;
+    width: 4em;
+}
+
+.criteriaForm p {
+    font-weight: bold;
+    margin: 0 0 1em;
+}
+
+.criteriaForm .packagesButtonWrapper {
+    float: right;
+    margin: 1em 0 0;
+}
+
+#sd_checkInDate {
+    margin: 0 1em 0 0;
+}
+
+.criteriaForm #checkAvailProcessImg {
+    float: right;
+    padding: 17px 3px 0 0;
+}
+
+.packagesButtonWrapper > .packagesButton {
+	float: right;
+}
+
+input.submitter + img.loadingIcon {
+	float: right;
+	padding-right: 0.5em;
+	padding-top: 4px;
+	background-color: inherit;
+}
+
+.criteriaForm .calImg {
+    float: left;
+    margin: 19px 2px 0 0;
+}
+
+.criteriaForm .DatesForm {
+    float: left;
+    width: 44%;
+}
+
+.criteriaForm .DatesFormcheckin, .criteriaForm .DatesFormcheckout {
+    display: block;
+    float: left;
+    font-size: 0.917em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.criteriaForm .DatesFormcheckin span, .criteriaForm .DatesFormcheckout span {
+    color: #999999;
+    font-weight: normal;
+}
+
+.layer .closeLayer {
+	margin-top: 2em;
+	cursor: pointer;
+}
+
+.layer .closeControl.layerHead, .layer .layerCloseControl.layerHead {
+    background: url(http://prodcache.internal.ihg.com/content/dam/etc/media_library/branded/hi/cn/icons/sprite/sprite.gif) no-repeat scroll 100% -1064px transparent;
+    position: absolute;
+    display: block;
+    height: 15px;
+    padding: 0;
+    right: 5px;
+    top: 5px;
+    width: 15px;
+    margin: 0;
+}
+
+.layerFooter {
+	padding-top: 1em;
+	text-align: center;
+}
+
+#travelCriteriaLayer {
+    margin: 0 0 0 -75px;
+    width: 363px;
+    z-index: 11;
+}
+
+#moreThanNineRoomsDialog {
+	width: 295px;
+	margin-left: -25px;
+	z-index: 12;
+}
+
+/*end popup layer rules*/
+
+
+/* parsys component */
+div.par {
+	clear: both;
+}
+
+div.image h3 {
+	float: left;
+}
+
+div.parsys_column {
+    height: 100%;
+    width: 100%;
+    float: left;
+    border: 0;
+	vertical-align: top;
+    padding: 0;
+    margin: 5px 0 5px 0;
+}
+
+div.section {
+/*
+Property added to avoid IE hasLayout issue on paragraphs,
+see #20817 - IE6: div around Drag Components image not big enough
+*/
+	/* margin-bottom: 13px; */ 
+	/* zoom: 1; */
+}
+
+div.parsys_column .section {
+	overflow: hidden;
+    width: 100%;
+}
+
+.cq-colctrl-lt14 div.parsys_column .section {
+	width: 87%;
+}
+
+/* column control layouts */
+div.cq-colctrl-cols {
+	width: 100%;
+	float: left;
+}
+
+div.cq-colctrl-default {
+	width: 100%;
+}
+
+/* div.cq-colctrl-lt0 { background:url(images/cq-colctrl-lt0.gif) repeat-y scroll 0 0;}*/
+div.cq-colctrl-lt0-c0 {
+	width: 75%;
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt0-c1 {
+	width: 20%;
+}
+
+/* div.cq-colctrl-lt1 { background:url(images/cq-colctrl-lt1.gif) repeat-y scroll 0 0;}*/
+div.cq-colctrl-lt1-c0 {
+	width: 14%;
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt1-c1 {
+	width: 83%;
+}
+
+/* div.cq-colctrl-lt2 { background:url(images/cq-colctrl-lt1.gif) repeat-y scroll 0 0;}*/
+div.cq-colctrl-lt2-c0 {
+	width: 60%;
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt2-c1 {
+	width: 38%;
+}
+
+/* div.cq-colctrl-lt3 { background:url(images/cq-colctrl-lt1.gif) repeat-y scroll 0 0;}*/
+div.cq-colctrl-lt3-c0 {
+	width: 44%;
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt3-c1 {
+	width: 54%;
+}
+
+/* div.cq-colctrl-lt4 { background:url(images/cq-colctrl-lt1.gif) repeat-y scroll 0 0;}*/
+div.cq-colctrl-lt4-c0 {
+	width: 95%;
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt4-c1 {
+	width: 3%;
+}
+
+/* div.cq-colctrl-lt5 { background:url(images/cq-colctrl-lt1.gif) repeat-y scroll 0 0;}*/
+div.cq-colctrl-lt5-c0 {
+	width: 25%;
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt5-c1 {
+	width: 65%;
+}
+
+/* div.cq-colctrl-lt6 { background:url(images/cq-colctrl-lt1.gif) repeat-y scroll 0 0;}*/
+div.cq-colctrl-lt6-c0 {
+	width: 62%;
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt6-c1 {
+	width: 35%;
+}
+
+/* div.cq-colctrl-lt7 { background:url(images/cq-colctrl-lt2.gif) repeat-y scroll 0 0;}*/
+div.cq-colctrl-lt7-c0 {
+	width: 38%;
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt7-c1 {
+	width: 22%;
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt7-c2 {
+	width: 32%;
+}
+
+/* div.cq-colctrl-lt8 { background:url(images/cq-colctrl-lt3.gif) repeat-y scroll 0 0; }*/
+div.cq-colctrl-lt8-c0 {
+	width: 25%;
+}
+
+div.cq-colctrl-lt8-c1 {
+	width: 25%;
+}
+
+div.cq-colctrl-lt8-c2 {
+	width: 25%;
+}
+
+div.cq-colctrl-lt8-c3 {
+	width: 25%;
+}
+
+/* div.cq-colctrl-lt9 { background:url(images/cq-colctrl-lt3.gif) repeat-y scroll 0 0; }*/
+div.cq-colctrl-lt9-c0 {
+	width: 27%;
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt9-c1 {
+	width: 27%;
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt9-c2 {
+	width: 27%;
+}
+
+div.cq-colctrl-lt9-c3 {
+	width: 15%;
+}
+
+/* div.cq-colctrl-lt10 { background:url(images/cq-colctrl-lt3.gif) repeat-y scroll 0 0; }*/
+div.cq-colctrl-lt10-c0 {
+	width: 15%;
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt10-c1 {
+	width: 15%;
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt10-c2 {
+	width: 15%;
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt10-c3 {
+	width: 15%;
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt10-c4 {
+	width: 15%;
+	padding-right: 14px;
+}
+
+/* div.cq-colctrl-lt11 { background:url(images/cq-colctrl-lt3.gif) repeat-y scroll 0 0; width:100%;}*/
+div.cq-colctrl-lt11-c0 {
+	width: 18%;
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt11-c1 {
+	width: 19%;
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt11-c2 {
+	width: 19%;
+}
+
+div.cq-colctrl-lt11-c3 {
+	width: 19%;
+}
+
+div.cq-colctrl-lt11-c4 {
+	width: 18%;
+}
+
+/* div.cq-colctrl-lt12 { background:url(images/cq-colctrl-lt3.gif) repeat-y scroll 0 0; }*/
+div.cq-colctrl-lt12-c0 {
+	width: 10%;
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt12-c1 {
+	width: 10%;
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt12-c2 {
+	width: 10%;
+}
+
+div.cq-colctrl-lt12-c3 {
+	width: 10%;
+}
+
+div.cq-colctrl-lt12-c4 {
+	width: 10%;
+}
+
+div.cq-colctrl-lt12-c5 {
+	width: 10%;
+}
+
+div.cq-colctrl-lt12-c6 {
+	width: 10%;
+}
+
+div.cq-colctrl-lt12-c7 {
+	width: 10%;
+}
+
+div.cq-colctrl-lt12-c8 {
+	width: 10%;
+}
+
+/* div.cq-colctrl-lt13 { background:url(images/cq-colctrl-lt2.gif) repeat-y scroll 0 0;}*/
+div.cq-colctrl-lt13-c0 {
+	width: 20%;
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt13-c1 {
+	width: 5%;
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt13-c2 {
+	width: 65%;
+}
+
+/* div.cq-colctrl-lt14 { background:url(images/cq-colctrl-lt3.gif) repeat-y scroll 0 0; }*/
+div.cq-colctrl-lt14-c0 {
+	width: 25%;
+}
+
+div.cq-colctrl-lt14-c1 {
+	width: 25%;
+}
+
+div.cq-colctrl-lt14-c2 {
+	width: 25%;
+	width: 24.9%\9;
+}
+
+div.cq-colctrl-lt14-c3 {
+	width: 25%;
+	width: 24.9%\9;
+}
+
+/* div.cq-colctrl-lt15 { background:url(images/cq-colctrl-lt2.gif) repeat-y scroll 0 0;}*/
+div.cq-colctrl-lt15-c0 {
+	width: 65%;
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt15-c1 {
+	width: 15%;
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt15-c2 {
+	width: 15%;
+}
+
+/* div.cq-colctrl-lt19 { background:url(images/cq-colctrl-lt2.gif) repeat-y scroll 0 0;}*/
+div.cq-colctrl-lt19-c0 {
+	width: 20%;
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt19-c1 {
+	width: 10%;
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt19-c2 {
+	width: 40%;
+}
+
+/* div.cq-colctrl-lt20 { background:url(images/cq-colctrl-lt2.gif) repeat-y scroll 0 0;}*/
+div.cq-colctrl-lt20-c0 {
+	width: 20%;
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt20-c1 {
+	width: 32%;
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt20-c2 {
+	width: 40%;
+}
+
+/* div.cq-colctrl-lt21 { background:url(images/cq-colctrl-lt2.gif) repeat-y scroll 0 0;}*/
+div.cq-colctrl-lt21-c0 { 
+	width: 40%; 
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt21-c1 { 
+	width: 34%; 
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt21-c2 { 
+	width: 20%; 
+}
+
+/* div.cq-colctrl-lt22 { background:url(images/cq-colctrl-lt2.gif) repeat-y scroll 0 0;}*/
+div.cq-colctrl-lt22-c0 { 
+	width: 30%; 
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt22-c1 { 
+	width: 24%;
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt22-c2 { 
+	width: 40%; 
+}
+
+/* div.cq-colctrl-lt23 { background:url(images/cq-colctrl-lt2.gif) repeat-y scroll 0 0;}*/
+div.cq-colctrl-lt23-c0 { 
+	width: 40%; 
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt23-c1 { 
+	width: 14%; 
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt23-c2 { 
+	width: 40%; 
+}
+
+/* div.cq-colctrl-lt24 { background:url(images/cq-colctrl-lt2.gif) repeat-y scroll 0 0;}*/
+div.cq-colctrl-lt24-c0 { 
+	width: 50%; 
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt24-c1 { 
+	width: 4%; 
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt24-c2 { 
+	width: 40%; 
+}
+
+
+/* div.cq-colctrl-lt25 { background:url(images/cq-colctrl-lt2.gif) repeat-y scroll 0 0;}*/
+div.cq-colctrl-lt25-c0 { 
+	width: 25%; 
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt25-c1 { 
+	width: 25%; 
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt25-c2 { 
+	width: 25%; 
+}
+
+
+/* div.cq-colctrl-lt26 { background:url(images/cq-colctrl-lt2.gif) repeat-y scroll 0 0;}*/
+div.cq-colctrl-lt26-c0 { 
+	width: 33%; 
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt26-c1 { 
+	width: 33%; 
+	padding-right: 14px;
+}
+
+div.cq-colctrl-lt26-c2 { 
+	width: 33%; 
+}
+
+
+.dayContentWrapper {
+}
+
+.dayContentWrapper table {
+	border-collapse: collapse;
+	border-color: #b1a0a5;
+}
+
+.topBannerContainer,
+.leftContentContainer,
+.rightContentContainer,
+.middleContentContainer {
+	overflow: hidden;
+}
+
+.leftContentContainer {
+	float: left;
+	width: 45em; /* 81 - 35 = 45; 1em for gutter */
+}
+
+.rightContentContainer {
+	float: right;
+	width: 420px;/*qc#131380 - PROD-ISSUE - Friends & Family homepage cutoff in IE 8*/ /* 81 - 45 = 35; 1em for gutter */
+}
+
+.middleContentContainer {
+}
+
+.text-2-0,
+.image-2-0,
+.textimage-2-0 {
+	margin: 1em 0;
+}
+
+/*-------------------------*/
+/* Start - Global */
+/*-------------------------*/
+
+/* brand-specific generic elements */
+h2, h3 {color: #43a23b;}
+
+.text-2-0,
+.image-2-0,
+.textimage-2-0 {
+	margin: auto;
+}
+
+/*-------------------------*/
+/* End - Global */
+/*-------------------------*/
+

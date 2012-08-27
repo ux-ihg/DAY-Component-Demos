@@ -1,0 +1,9 @@
+/* START SIMPLE HIDE/SHOW */
+.hide-show {width:100%;}
+/* terms and conditions */
+.terms h3{margin-top:35px;}
+.terms h3 a{font-family:Times; display: block; text-decoration:none; color:#232520; background:url(../img/plus-minus.gif) left 17px no-repeat; padding:15px 0px 4px 20px; border-bottom:1px dotted #9c9c9a; text-transform:uppercase; letter-spacing:0.1em}
+.terms h3 a:hover{color:#846422; }
+.terms h3.active a{background:url(../img/plus-minus.gif) left -122px no-repeat}
+.terms p{ font-size:11px; color:#777; padding: 15px 0 0 0; font-family:Arial; line-height:1.5em;}
+/* END SIMPLE HIDE/SHOW */

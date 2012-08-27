@@ -1,0 +1,29 @@
+/* TEXT ON IMAGE HOVER */
+body{width:972px}/* only for testing - remove*/
+
+/* SET BACKGROUND IMAGE IN DAY */
+div.img-1{background-image:url(../img/img1.jpg)}
+div.img-2{background-image:url(../img/img1.jpg)}
+div.img-3{background-image:url(../img/img1.jpg)}
+
+/* MID CLASS PROVIDES SPACING TO IMG 2 ONLY */
+.mid{margin:0 6px}
+
+div.img-text-module{width:320px; height:320px; overflow:hidden; position:relative; float:left}
+
+div.img-text-module h4{position:absolute; top:0; left:0; width:100%; opacity:.80; margin:0; padding:0}
+div.img-text-module h4 a{display:block; height:22%; padding:4.5%; background:url(../img/arrow.png) 96% 50% no-repeat #393a35; -moz-opacity:.85; filter:alpha(opacity=85); font-family:Times; font-size:14px; color:#fff; text-decoration:none; text-transform:uppercase; letter-spacing:.1em}
+
+div.img-text-module h4:hover{opacity:1}
+div.img-text-module:hover h4{opacity:1}
+div.img-text-module h4 a:hover{text-decoration:underline}
+/* POSITION CONTENT OUT OF VIEW */
+div.img-text-module div.img-text-content{position:absolute; left:-999px; width:91.5%; top:13.5%; background:#f5f5f5; height:250px; padding:4.5%; color:#54534a; font-size:12px; font-family:Arial; line-height:1.5em; cursor:default}
+
+div.img-text-content h5{color:#393a35; font-size:20px; font-family:Times; padding-bottom:20px; margin:0}
+/* ON HOVER BRING BACK CONTENT */
+div.img-text-module:hover div.img-text-content{left:0}
+
+div.img-text-content a.img-text-link{color:#846422; background:url(../img/link-arrow.gif) left 50% no-repeat; margin-top:15px; padding-left:10px; text-decoration:none; display:block; clear:both}
+
+div.img-text-content a.img-text-link:hover{text-decoration:underline}

@@ -1,0 +1,10 @@
+body{width:972px}/* only for testing - remove*/
+
+div.one-third-img-link-content{width:308px; float:left}
+div.one-third-img-link-content p{font-family:arial; font-size:12px; line-height:1.5em; color:#54534a}
+div.one-third-img-link-content a.one-third-img-text-link, div.one-third-img-link-content h5{text-decoration:none; display:block; clear:both; padding:8px 0; background:url(../img/double-arrow.gif) 99% 8px no-repeat; font-family:Times; font-size:11px; text-transform:uppercase; color:#54534a; letter-spacing:0.1em; border-bottom:1px solid #dbdbdb; margin-bottom:12px}
+div.one-third-img-link-content h5{background:none}
+div.one-third-img-link-content a.one-third-img-text-link:hover{color:#846422; background:url(../img/double-arrow.gif) 99% -45px no-repeat}
+
+/* add some margin to both sides of the middle box */
+div.mid{margin:0px 24px}

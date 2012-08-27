@@ -1,0 +1,81 @@
+<!--
+##################################################################################
+TEMPLATE FOR BUILDING CUSTOM DAY PAGES OUTSIDE OF DAY ENVIRONMENT 
+OUR SITES CURRENTLY USE JQUERY v1.5.2 AND THE STRICT DOCTYPE IN THIS EXAMPLE
+
+Notes:
+1. If your styles are loaded into the header via link tag they will come before the app styles
+(global.css). Your styles must be specific enough so that they are not overwritten by any CSS that comes after yours.
+
+2. All IHG sites are currently using jQuery 1.5.2 so any plugin or jQuery you use must work in this older version.
+
+3.In the web app global.js jQuery's alias has been change to "jq" (see noConflict). To use
+jQuery's default alias ($, jQuery) you must reassign the alias back to it's default in your code. 
+
+4. If your code gets built as a component, DAY will likely add a couple wrapping divs
+with IDs or Classes to your code. Just FYI
+
+5. You can NOT rename/reorganize this structure because of existing processes and limitations.
+
+!! FINAL PACKAGE SHOULD NOT INCLUDE THE FOLLOW (for local testing purposes):
+	- css/example-hi-global.css
+	- js/jquery-1.5.2.min.js
+
+##################################################################################
+-->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en">   
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <title>Title of Page</title>
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/example-hi-global.css" />
+        <script src="js/jquery-1.5.2.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+        // global.js reassigns jQuery namespace to jq
+        	$(function() {
+        		var jq = jQuery.noConflict();
+        		//$ no longer references the jQuery lib
+
+        		// BELOW WILL NOT WORK
+        		//$('body').css('background-color','blue');
+
+        		// BELOW WILL WORK
+        		//$('body').css('background-color','blue');
+        		
+        		//you can still use "jQuery" namespace to reference lib
+        		//jQuery('body').css('background-color','blue');
+        	});
+        </script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="MastheadShell">
+                <div id="contentWrapper">
+                    <div class="dayContentWrapper">
+                        <!-- PLUGINS/CUSTOM SCRIPTS WILL GET INSTERED JUST AFTER THE dayContent Wrapper OPENING DIV -->
+                        <script src="js/scripts.js" type="text/javascript"></script>
+                        
+                        <!-- DAY GENERATED CLASSES WRAP THE COMPONENT -->
+                        <div class="componentWrap">
+                        <div class="componentClass">
+	                        <!-- COMPONENT INTI JS WILL BE INJECTED WITH THE COMPONENT GENERATED HTML -->
+	                        <script type="text/javascript">
+	                        	//just for this code revert namespace back to jQuery namespace to use $
+		                        (function ($) {
+							    	$('body').css('background-color','grey');
+								})(jQuery);
+	                        </script>
+	                        
+	                        	<!-- COMPONENT HTML GOES HERE -->
+	                        	<div><p>YOUR COMPONENT HTML</p></div>
+                        </div><!-- end componentClass -->
+                        </div><!-- end componentWrap -->
+                    </div><!-- dayContentWrapper -->
+                </div><!-- /contentWrapper -->
+            </div><!-- /MastheadShell -->
+        </div><!-- /wrapper -->
+    </body>
+
+</html>

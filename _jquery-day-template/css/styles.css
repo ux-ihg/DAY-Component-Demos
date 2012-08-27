@@ -1,0 +1,18 @@
+/* ADD CUSTOM CSS STYLES HERE
+ * They must be specific enough to not be over written by inherited by other style sheets
+ * Holiday Inn's global style sheet has been included for inherited testing purposes. 
+ * You may need to reset inherited styles like padding, margin, line-height, etc.
+*/
+
+/* example reset on new element */
+div.componentWrap, div.conponent-name p,  div.conponent-name a, div.conponent-name blockquote, div.conponent-name h2, div.conponent-name h3, div.conponent-name h4, div.conponent-name h5,{
+	padding: 0;
+	margin:0;
+	line-height: normal;
+	font-weight: normal;
+	text-transform: none;
+}
+
+div.componentWrap p {
+	color: white;
+}

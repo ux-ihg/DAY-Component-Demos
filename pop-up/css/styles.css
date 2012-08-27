@@ -1,0 +1,22 @@
+*{padding: 0; margin: 0; line-height: 1em; font-weight: normal;}
+
+body{}/* only for testing - remove*/
+
+div#wrap {width:972px; margin: 0 auto; clear: both; position: relative;}
+
+/* h1 style */
+h1{color:#846422; border-bottom:1px solid #86897d; font-family:"Times New Roman"; font-size:14px; letter-spacing:0.1em; margin-bottom:24px; padding-bottom:4px; padding-top:25px; text-transform:uppercase; position: relative;}
+
+/* ic css button */
+.res-mod-popup-btn{cursor:pointer; border: none; line-height: 1em; margin:0; text-transform:uppercase; color:#fff; text-decoration: none; padding:3px 9px; background:#54534a; overflow:visible; -webkit-border-radius:2px; -moz-border-radius:2px; border-radius:2px; font-size:10px; font-family:Arial; letter-spacing:0.1em; position:absolute; right:0; margin-top:-16px}
+
+.res-mod-popup-btn:hover{background:#846422; line-height: 1em; padding:3px 9px;}
+
+.btn-on {background:#846422}
+
+.res-mod-popup-btn .res-mod-arrow{position:absolute; width:12px; height:6px; background:url(http://qap.internal.ihg.com/content/dam/etc/media_library/branded/ic/cn/home/nav/bg_arrow_mega_menu.png) top left no-repeat; top:16px; left:48%;}
+
+/* the res mod popup styles */
+div.res-mod-popup-wrap{position:relative}
+div.res-mod-popup-wrap-inner{position:relative; display:block; z-index: 9999;}
+div.res-mod-popup{border:5px solid #846422; width:420px; height:205px; position:absolute; right:0; top:6px}

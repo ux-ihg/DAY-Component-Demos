@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>IC jQuery Slider</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/ic.jquery.slider.css" />
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.2.min.js"></script>
+  <script type="text/javascript" src="js/hero.content.slider.min.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($) {
+      $('#remove').remove();
+      $('div').removeClass('no-js');
+        $(".ic-content-hero-slider").slideshow({
+
+          navigation      : true,    // so see any options below set to true
+          arrows          : true,    // Show next/prev arrows
+          control         : true,    // show play/pause toggle
+          selector        : true,   // show coin selectors
+          timer           : false,   // show timer
+          counter         : true,    // show counter, # of #
+
+          hideControls    : false,   // to hide all controls set to true
+
+          pauseOnClick    : false,   // allow pause on slider click
+          pauseOnHover    : false,   // allow pause on slider hover
+          loop            : false,    // loop through all slide continuously
+          slideshow       : true,    // start slideshow on load
+
+          transition      : 'fade', // fade, slip
+
+          prev            : "Go to previous slide",
+          next            : "Go to next slide",
+          pausePlay       : "Pause/Play Toggle"
+      });
+
+        // stop slider accessible btn
+        $('a.stop-slider').click(function(){
+          $(".ic-content-hero-slider").slideshow().stopTimer()
+        });
+    });
+  </script>
+</head>
+
+<body>
+  <!-- START SLIDER WRAPPER -->
+  <p class="accessible">
+    The following area of this web page contains a slider with highly interactive content that may not be accessible to screen readers.
+    <a href="#skip">Skip interactive content.</a>
+    <a class="stop-slider" href="#">Click here to stop slider.</a>
+  </p>
+  <div id="hero-content-slider-wrap" class="">
+    <div class="hero-content-slider-vert ic-content-hero-slider no-js">
+      <!-- START 1ST SLIDE -->
+      <div id="slide-1" class="hero-content-slider-slide">
+        <div class="caption">
+          <div class="caption-wrap">
+            <div class="caption-inner">
+              <h4>Slide 1 tristique eu pneum</h4>
+              <p>
+                Verto lobortis premo quod tincidunt, consequat luptatum, scisco, capio, gravis, eum sudo.
+              </p>
+              <div class="cta-btn">
+                <a href="#">Some CTA Button</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="assets/bpg.jpg" width="1600" height="300" alt="Slide 1" title="Slide 1" />
+      </div>
+      <!-- END 1ST SLIDE -->
+      <!-- START 2nd SLIDE -->
+      <div id="slide-2" class="hero-content-slider-slide">
+        <div class="caption">
+          <div class="caption-wrap">
+            <div class="caption-inner">
+              <h4>Slide 2 hendrerit tristique eu pneum</h4>
+              <p>
+                Fatua et ea gemino proprius in. Nulla pertineo proprius suscipere dignissim, ratis, erat singularis tum saluto jumentum tation, validus defui eu
+              </p>
+              <div class="cta-btn">
+                <a href="#">Some CTA Button</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="assets/img2.jpg" width="1600" height="300" alt="Slide 2" title="Slide 2" />
+      </div>
+      <!-- END 2nd SLIDE -->
+      <!-- START 3rd SLIDE -->
+      <div id="slide-3" class="hero-content-slider-slide">
+        <div class="caption">
+          <div class="caption-wrap">
+            <div class="caption-inner">
+              <h4>Slide 3 tristique eu pneum</h4>
+              <p>
+                Tincidunt ad metuo feugiat caecus quae os, accumsan gemino nostrud abdo magna eros pneum vel.
+              </p>
+              <div class="cta-btn">
+                <a href="#">Some CTA Button</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="assets/img3.jpg" width="1600" height="300" alt="Slide 3" title="Slide 3" />
+      </div>
+      <!-- END 3rd SLIDE -->
+    </div>
+    <!-- end slider -->
+    <!--[if lte IE 8]>
+    <style type="text/css">
+    #remove{display:none;}
+    #hero-content-slider-wrap .caption .caption-inner{
+    background:#000;}
+    </style>
+    <![endif]-->
+    <!-- START CSS3 SLIDER NAV -->
+    <div class="control-bar no-js" id="remove">
+      <div class="control-bar-inner-wrap">
+        <div class="hero-content-slider-navigation">
+          <div class="hero-content-slider-selectors">
+            <a rel="1" class="hero-content-slider-selector" href="#slide-1">
+              <span class="hero-content-slider-selector-span hero-content-slider-selector-1">
+                <span>1</span>
+              </span>
+            </a>
+            <a rel="2" class="hero-content-slider-selector" href="#slide-2">
+              <span class="hero-content-slider-selector-span hero-content-slider-selector-2">
+                <span>2</span>
+              </span>
+            </a>
+            <a rel="3" class="hero-content-slider-selector" href="#slide-3">
+              <span class="hero-content-slider-selector-span hero-content-slider-selector-3">
+                <span>3</span>
+              </span>
+            </a>
+            <a rel="4" class="hero-content-slider-selector" href="#slide-4">
+              <span class="hero-content-slider-selector-span hero-content-slider-selector-4">
+                <span>4</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END CSS3 SLIDER NAV -->
+  </div>
+  <!-- END SLIDER WRAPPER -->
+  <div id="skip" class="accessible">
+    <p>You are now below the interactive content.</p>
+  </div>
+
+</body>
+</html>
